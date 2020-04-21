@@ -1,0 +1,31 @@
+Login Super Admin :
+Email : okkymahes@gmail.com
+password : 123456789
+
+================================================
+
+- Dashboard belum
+- Menu
+ * untuk hapus (supaya bisa pake modal)
+ * opsi status aktif/non aktif supaya pake modal saja
+ * form tambah dan form ubah untuk status nanti dibuatin pake radio
+- submenu
+ * form tambah & form ubah udah tapi untuk kolom status ganti pake radio belum
+ * fitur hapus belum (nanti pake modal saja)
+ * opsi status aktif/non aktif supaya pake modal saja
+- role user 
+ * untuk hapus (supaya bisa pake modal)
+- user
+ * untuk hapus (supaya bisa pake modal)
+ * belum belum untuk ganti password
+ * opsi status aktif/non aktif supaya pake modal saja
+ * maunya form ubah di kolom email bisa cek dlu email valid gaknya baru bisa diupdate (seperti saat tambah data)
+- untuk sidebar fitur user di menu settings tidak menampilkan role super admin
+- dojo
+ * untuk hapus (supaya bisa pake modal)
+- sabuk
+ * untuk hapus (supaya bisa pake modal)
+- logout bisa ditambahin isi modal dlu baru proses logout
+- karateka
+ * untuk hapus (supaya bisa pake modal)
+ * belum untuk data karatenya (opsi detail)

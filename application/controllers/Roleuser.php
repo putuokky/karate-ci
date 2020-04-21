@@ -1,0 +1,130 @@
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+
+class Roleuser extends CI_Controller
+{
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('model_roleuser', 'm_roleuser');
+		$this->load->model('model_menu', 'm_menu');
+		$this->load->model('model_user', 'm_user');
+	}
+
+	public function index()
+	{
+		$data['judul'] = 'Role User';
+		$data['subjudul'] = 'Data Role User';
+
+		$data['role'] = $this->m_roleuser->getAllRoleusers();
+
+		$maile = $this->session->userdata('email');
+		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+
+		$this->load->view('templates/header', $data);
+		$this->load->view('templates/topbar', $data);
+		$this->load->view('templates/sidebar', $data);
+		$this->load->view('roleuser/index', $data);
+		$this->load->view('templates/footer', $data);
+	}
+
+	public function tambah()
+	{
+		$data['judul'] = 'Role User';
+		$data['subjudul'] = 'Form Tambah Role User';
+
+		$maile = $this->session->userdata('email');
+		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+
+		$this->form_validation->set_rules('roleusr', 'Role User', 'required');
+
+		if ($this->form_validation->run() == false) {
+			$this->load->view('templates/header', $data);
+			$this->load->view('templates/topbar', $data);
+			$this->load->view('templates/sidebar', $data);
+			$this->load->view('roleuser/formtambah', $data);
+			$this->load->view('templates/footer', $data);
+		} else {
+			$roleusr = $this->input->post('roleusr');
+
+			$data = [
+				'role' => $roleusr
+			];
+
+			$this->m_roleuser->tambahDataRoleuser($data);
+			$this->session->set_flashdata('message', 'ditambah');
+			redirect('log/roleuser');
+		}
+	}
+
+	public function ubah($id)
+	{
+		$data['judul'] = 'Role User';
+		$data['subjudul'] = 'Form Ubah Role User';
+
+		$data['role'] = $this->m_roleuser->getRoleuserById($id);
+
+		$maile = $this->session->userdata('email');
+		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+
+		$this->form_validation->set_rules('roleusr', 'Role User', 'required');
+
+		if ($this->form_validation->run() == false) {
+			$this->load->view('templates/header', $data);
+			$this->load->view('templates/topbar', $data);
+			$this->load->view('templates/sidebar', $data);
+			$this->load->view('roleuser/formubah', $data);
+			$this->load->view('templates/footer', $data);
+		} else {
+			$id = $this->input->post('id');  // tidak perlu ini diubah
+			$roleusr = $this->input->post('roleusr');
+
+			$data = [
+				'role' => $roleusr
+			];
+
+			$this->m_roleuser->ubahDataRoleuser($data, $id);
+			$this->session->set_flashdata('message', 'diubah');
+			redirect('log/roleuser');
+		}
+	}
+
+	public function akses($id)
+	{
+		$data['judul'] = 'Role User';
+		$data['subjudul'] = 'Data Role User Akses';
+
+		$data['role'] = $this->m_roleuser->getRoleuserById($id);
+		$data['menu'] = $this->m_menu->getAllMenuBy();
+
+		$maile = $this->session->userdata('email');
+		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+
+		$this->load->view('templates/header', $data);
+		$this->load->view('templates/topbar', $data);
+		$this->load->view('templates/sidebar', $data);
+		$this->load->view('roleuser/tabelakses', $data);
+		$this->load->view('templates/footer', $data);
+	}
+
+	public function changeaccess()
+	{
+		$menu_id = $this->input->post('menuId');
+		$role_id = $this->input->post('roleId');
+
+		$data = [
+			'role_id' => $role_id,
+			'menu_id' => $menu_id
+		];
+
+		$result = $this->db->get_where('user_access_menu', $data);
+
+		if ($result->num_rows() < 1) {
+			$this->db->insert('user_access_menu', $data);
+		} else {
+			$this->db->delete('user_access_menu', $data);
+		}
+
+		$this->session->set_flashdata('message', 'diganti Akses');
+	}
+}
