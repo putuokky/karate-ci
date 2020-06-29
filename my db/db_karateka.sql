@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 29, 2020 at 12:59 PM
+-- Generation Time: Jun 29, 2020 at 01:04 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.6
 
@@ -529,7 +529,7 @@ INSERT INTO `dojo` (`id_dojo`, `nama_dojo`) VALUES
 
 CREATE TABLE `karateka` (
   `id_karateka` int(11) NOT NULL,
-  `nama` int(11) NOT NULL,
+  `biodata` int(11) NOT NULL,
   `sabuk` int(11) NOT NULL,
   `tgl_ujian` date DEFAULT NULL,
   `no_ijasah` text DEFAULT NULL,
@@ -542,7 +542,7 @@ CREATE TABLE `karateka` (
 -- Dumping data for table `karateka`
 --
 
-INSERT INTO `karateka` (`id_karateka`, `nama`, `sabuk`, `tgl_ujian`, `no_ijasah`, `tgl_ijasah`, `nilai_rata`, `is_active`) VALUES
+INSERT INTO `karateka` (`id_karateka`, `biodata`, `sabuk`, `tgl_ujian`, `no_ijasah`, `tgl_ijasah`, `nilai_rata`, `is_active`) VALUES
 (1, 1, 2, '2018-10-06', '042/P.PROV-KKI/II/2019', '2019-02-28', '65.70', 0),
 (2, 1, 3, '0000-00-00', '', '0000-00-00', '0.00', 1),
 (3, 2, 2, '2018-10-06', '043/P.PROV-KKI/II/2019', '2019-02-28', '65.70', 0),
@@ -1298,7 +1298,7 @@ INSERT INTO `karateka` (`id_karateka`, `nama`, `sabuk`, `tgl_ujian`, `no_ijasah`
 (753, 345, 5, '0000-00-00', '', '0000-00-00', '0.00', 1),
 (754, 346, 2, '0000-00-00', '', '0000-00-00', '0.00', 0),
 (755, 346, 3, '0000-00-00', '', '0000-00-00', '0.00', 0);
-INSERT INTO `karateka` (`id_karateka`, `nama`, `sabuk`, `tgl_ujian`, `no_ijasah`, `tgl_ijasah`, `nilai_rata`, `is_active`) VALUES
+INSERT INTO `karateka` (`id_karateka`, `biodata`, `sabuk`, `tgl_ujian`, `no_ijasah`, `tgl_ijasah`, `nilai_rata`, `is_active`) VALUES
 (756, 346, 4, '2019-01-27', '184/P.PROV-KKI/III/2019', '2019-03-30', '69.30', 0),
 (757, 346, 5, '0000-00-00', '', '0000-00-00', '0.00', 1),
 (758, 347, 2, '0000-00-00', '', '0000-00-00', '0.00', 0),
