@@ -76,3 +76,6 @@ $route['log/sabuk/(:any)/(:num)'] = 'sabuk/$1/$2';
 
 $route['log/karateka(/:any)?'] = 'karateka$1';
 $route['log/karateka/(:any)/(:num)'] = 'karateka/$1/$2';
+
+$route['log/biodata(/:any)?'] = 'biodata$1';
+$route['log/biodata/(:any)/(:num)'] = 'biodata/$1/$2';
