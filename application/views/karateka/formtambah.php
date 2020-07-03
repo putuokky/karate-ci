@@ -33,47 +33,23 @@
               <div class="card-body">
                 <div class="form-group">
                   <label for="nama">Nama</label>
-                  <input type="text" class="form-control" id="nama" name="nama" placeholder="Enter Nama">
+                  <select class="form-control col-md-5 select2bs4" name="nama">
+                    <option value="0">-</option>
+                    <?php foreach ($nama as $n) : ?>
+                      <option value="<?= $n['id_biodata']; ?>"><?= $n['nama']; ?></option>
+                    <?php endforeach ?>
+                  </select>
                   <small class="form-text text-danger"><?= form_error('nama'); ?></small>
                 </div>
                 <div class="form-group">
-                  <label for="tempat_lahir">Tempat Lahir</label>
-                  <input type="text" class="form-control col-md-6" id="tempat_lahir" name="tempat_lahir" placeholder="Enter Tempat Lahir">
-                  <small class="form-text text-danger"><?= form_error('tempat_lahir'); ?></small>
-                </div>
-                <div class="form-group">
-                  <label for="tglahir">Tanggal Lahir</label>
-                  <div class="input-group">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
-                    </div>
-                    <input type="text" class="form-control col-md-3" id="datepicker" name="tglahir" placeholder="Enter Tanggal Lahir">
-                  </div>
-                  <small class="form-text text-danger"><?= form_error('tglahir'); ?></small>
-                </div>
-                <div class="form-group">
-                  <label for="jnskelamin">Jenis Kelamin</label>
-                  <div class="col-md-6">
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="jnskelamin" value="1">
-                      <label class="form-check-label">Laki - laki</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="jnskelamin" value="2">
-                      <label class="form-check-label">Perempuan</label>
-                    </div>
-                  </div>
-                  <small class="form-text text-danger"><?= form_error('jnskelamin'); ?></small>
-                </div>
-                <div class="form-group">
-                  <label for="dojo">Dojo</label>
-                  <select class="form-control col-md-4 select2bs4" name="dojo">
+                  <label for="sabuk">Sabuk</label>
+                  <select class="form-control col-md-4 select2bs4" name="sabuk">
                     <option value="0">-</option>
-                    <?php foreach ($dojo as $d) : ?>
-                      <option value="<?= $d['id_dojo']; ?>"><?= $d['nama_dojo']; ?></option>
+                    <?php foreach ($sabuk as $s) : ?>
+                      <option value="<?= $s['id_sabuk']; ?>"><?= $s['nama_sabuk']; ?></option>
                     <?php endforeach ?>
                   </select>
-                  <small class="form-text text-danger"><?= form_error('dojo'); ?></small>
+                  <small class="form-text text-danger"><?= form_error('sabuk'); ?></small>
                 </div>
               </div>
               <!-- /.card-body -->

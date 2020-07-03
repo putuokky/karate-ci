@@ -11,6 +11,11 @@ class Model_biodata extends CI_Model
         return $query->result_array();
     }
 
+    public function getBiodataByStatus()
+    {
+        return $this->db->get_where('biodata', ['status_karateka' => 0])->result_array();
+    }
+
     public function getBiodataById($id)
     {
         return $this->db->get_where('biodata', ['id_biodata' => $id])->row_array();
@@ -25,5 +30,11 @@ class Model_biodata extends CI_Model
     {
         $this->db->where('id_biodata', $id);
         $this->db->update('biodata', $data);
+    }
+
+    public function ubahDataBioForStatus($dt, $id)
+    {
+        $this->db->where('id_biodata', $id);
+        $this->db->update('biodata', $dt);
     }
 }

@@ -9,7 +9,6 @@ class Biodata extends CI_Controller
 		$this->load->model('Model_biodata', 'm_biodata');
 		$this->load->model('model_user', 'm_user');
 		$this->load->model('Model_dojo', 'm_dojo');
-		$this->load->model('Model_karate', 'm_karate');
 		$this->load->model('Model_sabuk', 'm_sabuk');
 	}
 

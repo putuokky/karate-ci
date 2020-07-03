@@ -6,8 +6,8 @@ class Karateka extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Model_biodata', 'm_biodata');
 		$this->load->model('model_user', 'm_user');
+		$this->load->model('Model_biodata', 'm_biodata');
 		$this->load->model('Model_dojo', 'm_dojo');
 		$this->load->model('Model_karate', 'm_karate');
 		$this->load->model('Model_sabuk', 'm_sabuk');
@@ -18,7 +18,7 @@ class Karateka extends CI_Controller
 		$data['judul'] = 'Karateka';
 		$data['subjudul'] = 'Data Karateka';
 
-		$data['biodata'] = $this->m_biodata->getAllBiodata();
+		$data['biodata'] = $this->m_karate->getAllKarate();
 
 		$maile = $this->session->userdata('email');
 		$data['userlogin'] = $this->m_user->getUserByMail($maile);
@@ -38,13 +38,11 @@ class Karateka extends CI_Controller
 		$maile = $this->session->userdata('email');
 		$data['userlogin'] = $this->m_user->getUserByMail($maile);
 
-		$data['dojo'] = $this->m_dojo->getAllDojo();
+		$data['nama'] = $this->m_biodata->getBiodataByStatus();
+		$data['sabuk'] = $this->m_sabuk->getAllSabuk();
 
 		$this->form_validation->set_rules('nama', 'Nama', 'required');
-		$this->form_validation->set_rules('tempat_lahir', 'Tempat Lahir', 'required');
-		$this->form_validation->set_rules('tglahir', 'Tanggal Lahir', 'required');
-		$this->form_validation->set_rules('jnskelamin', 'Jenis Kelamin', 'required');
-		$this->form_validation->set_rules('dojo', 'Dojo', 'required');
+		$this->form_validation->set_rules('sabuk', 'Sabuk', 'required');
 
 		if ($this->form_validation->run() == false) {
 			$this->load->view('templates/header', $data);
@@ -53,21 +51,21 @@ class Karateka extends CI_Controller
 			$this->load->view('karateka/formtambah', $data);
 			$this->load->view('templates/footer', $data);
 		} else {
+			$id = $this->input->post('nama');
 			$nama = $this->input->post('nama');
-			$tempat_lahir = $this->input->post('tempat_lahir');
-			$tglahir = date('Y-m-d', strtotime($this->input->post('tglahir')));
-			$jnskelamin = $this->input->post('jnskelamin');
-			$dojo = $this->input->post('dojo');
+			$sabuk = $this->input->post('sabuk');
 
 			$data = [
-				'nama' => $nama,
-				'tempat_lahir' => $tempat_lahir,
-				'tgl_lahir' => $tglahir,
-				'jenis_kelamin' => $jnskelamin,
-				'dojo' => $dojo
+				'biodata' => $nama,
+				'sabuk' => $sabuk
 			];
 
-			$this->m_biodata->tambahDataBiodata($data);
+			$dt = [
+				'status_karateka' => 1
+			];
+
+			$this->m_karate->tambahDataKarate($data);
+			$this->m_biodata->ubahDataBioForStatus($dt, $id);
 			$this->session->set_flashdata('message', 'ditambah');
 			redirect('log/karateka');
 		}
