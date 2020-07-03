@@ -74,7 +74,7 @@
                       <td><?php if (!empty($krt['tgl_ujian'])) {
                             echo date('d-m-Y', strtotime($krt['tgl_ujian']));
                           } else {
-                            echo 'Belum Ujian';
+                            echo '00-00-0000';
                           }
                           ?></td>
                       <td><?php if (!empty($krt['no_ijasah'])) {
@@ -86,7 +86,7 @@
                       <td><?php if (!empty($krt['tgl_ijasah'])) {
                             echo date('d-m-Y', strtotime($krt['tgl_ijasah']));
                           } else {
-                            echo 'Belum Ada Ijasah';
+                            echo '00-00-0000';
                           }
                           ?></td>
                       <td><?php if (!empty($krt['nilai_rata'])) {
