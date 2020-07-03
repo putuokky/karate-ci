@@ -32,6 +32,5 @@ Template
 - karateka
  * untuk hapus (supaya bisa pake modal)
  * belum untuk data karatenya (opsi detail)
- * form ubah belum, cocokin yg di tambah
  - biodata
  * untuk hapus (supaya bisa pake modal)

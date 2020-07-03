@@ -69,8 +69,6 @@
                     <tr>
                       <td><?= $no++; ?></td>
                       <td><a href="<?= base_url('log/karateka/detail/' . $bio['id_biodata']); ?>" class="btn btn-sm btn-info"><i class="fas fa-file-alt"></i> Detail</a>
-                        <a href="<?= base_url('log/karateka/ubah/' . $bio['id_biodata']); ?>" class="btn btn-sm btn-warning"><i class="fas fa-edit"></i> Ubah</a>
-                        <a href="" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modal-default"><i class="fas fa-trash"></i> Hapus</a>
                       </td>
                       <td><?= $bio['nama']; ?></td>
                       <td><?= $bio['tempat_lahir']; ?></td>

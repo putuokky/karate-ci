@@ -36,10 +36,4 @@ class Model_karate extends CI_Model
     {
         $this->db->insert('karateka', $data);
     }
-
-    public function ubahDataKarate($data, $id)
-    {
-        $this->db->where('id_biodata', $id);
-        $this->db->update('biodata', $data);
-    }
 }
