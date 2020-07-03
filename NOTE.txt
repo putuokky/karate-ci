@@ -31,6 +31,9 @@ Template
 - logout bisa ditambahin isi modal dlu baru proses logout
 - karateka
  * untuk hapus (supaya bisa pake modal)
- * belum untuk data karatenya (opsi detail)
- - biodata
+ - detail
+  * untuk hapus (supaya bisa pake modal)
+  * untuk ubahdetail belum
+  * opsi ujian dan ijasah belum
+- biodata
  * untuk hapus (supaya bisa pake modal)

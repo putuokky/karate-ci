@@ -69,7 +69,11 @@
                   foreach ($karate as $krt) : ?>
                     <tr>
                       <td><?= $no++; ?></td>
-                      <td>opsi</td>
+                      <td><a href="<?= base_url('log/karateka/detail/ubahdetail/' . $krt['id_karateka']); ?>" class="btn btn-sm btn-warning"><i class="fas fa-edit"></i> Ubah</a>
+                        <a href="" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modal-default"><i class="fas fa-trash"></i> Hapus</a>
+                        <a href="<?= base_url('log/karateka/detail/ujian/' . $krt['id_karateka']); ?>" class="btn btn-sm btn-default" title="Ujian"><i class="fas fa-file-signature"></i></a>
+                        <a href="<?= base_url('log/karateka/detail/ijasah/' . $krt['id_karateka']); ?>" class="btn btn-sm btn-info" title="ijasah"><i class="fas fa-file"></i></a>
+                      </td>
                       <td style="background-color: <?= $krt['warna_sabuk']; ?>; color: <?= $krt['warna_tulisan']; ?>;"><?= $krt['nama_sabuk']; ?></td>
                       <td><?php if (!empty($krt['tgl_ujian'])) {
                             echo date('d-m-Y', strtotime($krt['tgl_ujian']));
