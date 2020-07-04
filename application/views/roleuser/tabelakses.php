@@ -42,14 +42,14 @@
             <div class="card-body">
               <table id="" class="table table-bordered table-hover">
                 <thead>
-                  <tr>
+                  <tr class="btn-dark">
                     <th>No</th>
                     <th>Role User</th>
                     <th>Akses</th>
                   </tr>
                 </thead>
                 <tfoot>
-                  <tr>
+                  <tr class="btn-dark">
                     <th>No</th>
                     <th>Role User</th>
                     <th>Akses</th>

@@ -42,7 +42,7 @@
             <div class="card-body">
               <table id="" class="table table-bordered table-hover">
                 <thead>
-                  <tr>
+                  <tr class="btn-dark">
                     <th>No</th>
                     <th>Opsi</th>
                     <th>Sabuk</th>
@@ -53,7 +53,7 @@
                   </tr>
                 </thead>
                 <tfoot>
-                  <tr>
+                  <tr class="btn-dark">
                     <th>No</th>
                     <th>Opsi</th>
                     <th>Sabuk</th>

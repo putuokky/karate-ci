@@ -41,14 +41,14 @@
             <div class="card-body table-responsive">
               <table id="example1" class="table table-bordered table-hover">
                 <thead>
-                  <tr>
+                  <tr class="btn-dark">
                     <th>No</th>
                     <th>Opsi</th>
                     <th>Role User</th>
                   </tr>
                 </thead>
                 <tfoot>
-                  <tr>
+                  <tr class="btn-dark">
                     <th>No</th>
                     <th>Opsi</th>
                     <th>Role User</th>

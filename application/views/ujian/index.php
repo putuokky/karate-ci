@@ -34,7 +34,7 @@
             <div class="card-body table-responsive">
               <table id="example1" class="table table-bordered table-hover">
                 <thead>
-                  <tr>
+                  <tr class="btn-dark">
                     <th>No</th>
                     <th>Nama</th>
                     <th>Sabuk</th>
@@ -43,7 +43,7 @@
                   </tr>
                 </thead>
                 <tfoot>
-                  <tr>
+                  <tr class="btn-dark">
                     <th>No</th>
                     <th>Nama</th>
                     <th>Sabuk</th>
