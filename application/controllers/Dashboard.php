@@ -7,6 +7,7 @@ class Dashboard extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('model_user', 'm_user');
+		$this->load->model('Model_sabuk', 'm_sabuk');
 	}
 
 	public function index()
@@ -16,6 +17,8 @@ class Dashboard extends CI_Controller
 
 		$maile = $this->session->userdata('email');
 		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+
+		$data['sabuk'] = $this->m_sabuk->getAllSabuk();
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/topbar', $data);

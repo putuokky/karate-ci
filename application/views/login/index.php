@@ -36,7 +36,6 @@
           <?php endif; ?>
         </p>
         <form action="" method="post">
-          <small class="form-text text-danger"><?= form_error('maile'); ?></small>
           <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="Email" name="maile" id="maile">
             <div class="input-group-append">
@@ -45,7 +44,7 @@
               </div>
             </div>
           </div>
-          <small class="form-text text-danger"><?= form_error('passw'); ?></small>
+          <small class="form-text text-danger"><?= form_error('maile'); ?></small>
           <div class="input-group mb-3">
             <input type="password" class="form-control" placeholder="Password" name="passw" id="passw">
             <div class="input-group-append">
@@ -54,6 +53,7 @@
               </div>
             </div>
           </div>
+          <small class="form-text text-danger"><?= form_error('passw'); ?></small>
           <div class="row">
             <!-- /.col -->
             <div class="col-4">

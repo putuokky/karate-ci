@@ -7,7 +7,9 @@ Template
 
 ================================================
 
-- Dashboard belum
+- Dashboard 
+ * isi grafik? belum ada 
+ * jumlah tiap sabuk belum
 - Menu
  * untuk hapus (supaya bisa pake modal)
  * opsi status aktif/non aktif supaya pake modal saja
