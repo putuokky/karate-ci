@@ -33,8 +33,8 @@
   <!-- Sparkline -->
   <script src="<?= base_url('assets'); ?>/plugins/sparklines/sparkline.js"></script>
   <!-- JQVMap -->
-  <script src="<?= base_url('assets'); ?>/plugins/jqvmap/jquery.vmap.min.js"></script>
-  <script src="<?= base_url('assets'); ?>/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+  <!-- <script src="<?= base_url('assets'); ?>/plugins/jqvmap/jquery.vmap.min.js"></script> -->
+  <!-- <script src="<?= base_url('assets'); ?>/plugins/jqvmap/maps/jquery.vmap.usa.js"></script> -->
   <!-- jQuery Knob Chart -->
   <script src="<?= base_url('assets'); ?>/plugins/jquery-knob/jquery.knob.min.js"></script>
   <!-- daterangepicker -->
@@ -47,7 +47,7 @@
   <!-- overlayScrollbars -->
   <script src="<?= base_url('assets'); ?>/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-  <script src="<?= base_url('assets'); ?>/dist/js/pages/dashboard.js"></script>
+  <!-- <script src="<?= base_url('assets'); ?>/dist/js/pages/dashboard.js"></script> -->
   <!-- DataTables -->
   <script src="<?= base_url('assets'); ?>/plugins/datatables/jquery.dataTables.js"></script>
   <script src="<?= base_url('assets'); ?>/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
