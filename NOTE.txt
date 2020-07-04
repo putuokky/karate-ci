@@ -28,12 +28,12 @@ Template
  * untuk hapus (supaya bisa pake modal)
 - sabuk
  * untuk hapus (supaya bisa pake modal)
-- logout bisa ditambahin isi modal dlu baru proses logout
+- logout bisa ditambahin isi modal dlu baru proses logout / ada konfirmasi bisa berupa modal
 - karateka
  * untuk hapus (supaya bisa pake modal)
  - detail
   * untuk hapus (supaya bisa pake modal)
   * untuk ubahdetail belum
-  * opsi ujian dan ijasah belum
+  * saat nambah ijasah, otomatis jadi sabuk berikutnya, misal dari sabuk 1 ke sabuk 2
 - biodata
  * untuk hapus (supaya bisa pake modal)
