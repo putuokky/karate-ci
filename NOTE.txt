@@ -4,6 +4,8 @@ password : 123456789
 
 Template 
 - AdminLTE-3.0.2
+Framework 
+- Codeigniter versi 3.1.11
 
 ================================================
 
