@@ -38,6 +38,11 @@
                   <small class="form-text text-danger"><?= form_error('nama'); ?></small>
                 </div>
                 <div class="form-group">
+                  <label for="user">Username</label>
+                  <input type="text" class="form-control col-md-3" id="user" name="user" placeholder="Enter Username" value="<?= $user['usrname']; ?>" readonly>
+                  <small class="form-text text-danger"><?= form_error('user'); ?></small>
+                </div>
+                <div class="form-group">
                   <label for="mail">Email</label>
                   <input type="text" class="form-control col-md-4" id="mail" name="mail" placeholder="Enter Email" value="<?= $user['email']; ?>" readonly>
                   <small class="form-text text-danger"><?= form_error('mail'); ?></small>
