@@ -13,7 +13,7 @@ class Login extends CI_Controller
 	{
 		$data['judul'] = 'Login';
 
-		$this->form_validation->set_rules('maile', 'Email', 'required|valid_email');
+		$this->form_validation->set_rules('usr', 'Username', 'required');
 		$this->form_validation->set_rules('passw', 'Password', 'required');
 
 		if ($this->form_validation->run() == false) {
@@ -25,16 +25,16 @@ class Login extends CI_Controller
 
 	private function loginsukses()
 	{
-		$maile = $this->input->post('maile');
+		$usr = $this->input->post('usr');
 		$passw = $this->input->post('passw');
 
-		$userlogin = $this->m_user->getUserByMail($maile);
+		$userlogin = $this->m_user->getUserByUser($usr);
 
 		if ($userlogin) {
 			if ($userlogin['is_active'] == 1) {
 				if (password_verify($passw, $userlogin['password'])) {
 					$data = [
-						'email' => $userlogin['email'],
+						'usrname' => $userlogin['usrname'],
 						'role_id' => $userlogin['role_id']
 					];
 

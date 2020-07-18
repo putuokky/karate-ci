@@ -19,8 +19,8 @@ class Biodata extends CI_Controller
 
 		$data['biodata'] = $this->m_biodata->getAllBiodata();
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/topbar', $data);
@@ -34,8 +34,8 @@ class Biodata extends CI_Controller
 		$data['judul'] = 'Biodata';
 		$data['subjudul'] = 'Form Tambah Biodata';
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$data['dojo'] = $this->m_dojo->getAllDojo();
 
@@ -80,8 +80,8 @@ class Biodata extends CI_Controller
 		$data['biodata'] = $this->m_biodata->getBiodataById($id);
 		$data['dojo'] = $this->m_dojo->getAllDojo();
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$this->form_validation->set_rules('nama', 'Nama', 'required');
 		$this->form_validation->set_rules('tempat_lahir', 'Tempat Lahir', 'required');

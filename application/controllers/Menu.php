@@ -17,8 +17,8 @@ class Menu extends CI_Controller
 
 		$data['menu'] = $this->m_menu->getAllMenu();
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/topbar', $data);
@@ -32,8 +32,8 @@ class Menu extends CI_Controller
 		$data['judul'] = 'Menu Management';
 		$data['subjudul'] = 'Form Tambah Menu Management';
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$this->form_validation->set_rules('menu', 'Menu', 'required');
 		$this->form_validation->set_rules('urutan', 'Urutan', 'required');
@@ -68,8 +68,8 @@ class Menu extends CI_Controller
 
 		$data['menu'] = $this->m_menu->getMenuById($id);
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$this->form_validation->set_rules('menu', 'Menu', 'required');
 		$this->form_validation->set_rules('urutan', 'Urutan', 'required');

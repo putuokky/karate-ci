@@ -16,8 +16,8 @@ class Errorpage extends CI_Controller
 		$data['konten'] = 'Kami tidak dapat menemukan halaman yang Anda cari.';
 		$data['kontenBreak'] = 'Sementara itu, kamu mungkin';
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/topbar', $data);

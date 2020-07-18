@@ -15,8 +15,8 @@ class Dashboard extends CI_Controller
 		$data['judul'] = 'Dashboard';
 		$data['subjudul'] = 'Data Menu Management';
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$data['sabuk'] = $this->m_sabuk->getAllSabuk();
 

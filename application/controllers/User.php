@@ -21,8 +21,8 @@ class User extends CI_Controller
 			$data['users'] = $this->m_user->getAllUser();
 		}
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/topbar', $data);
@@ -42,11 +42,12 @@ class User extends CI_Controller
 			$data['role'] = $this->m_roleuser->getAllRoleuser();
 		}
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$this->form_validation->set_rules('nama', 'Nama', 'required');
-		$this->form_validation->set_rules('mail', 'Email', 'required|valid_email|is_unique[user.email]', [
+		$this->form_validation->set_rules('user', 'Username', 'required');
+		$this->form_validation->set_rules('mail', 'Email', 'valid_email|is_unique[user.email]', [
 			'is_unique' => 'This Email has already registered!'
 		]);
 		$this->form_validation->set_rules('passwrd', 'Password', 'required');
@@ -60,6 +61,7 @@ class User extends CI_Controller
 			$this->load->view('templates/footer', $data);
 		} else {
 			$nama = $this->input->post('nama');
+			$user = $this->input->post('user');
 			$mail = $this->input->post('mail');
 			$passwrd = password_hash($this->input->post('passwrd'), PASSWORD_DEFAULT);
 			$roleusr = $this->input->post('roleusr');
@@ -67,6 +69,7 @@ class User extends CI_Controller
 
 			$data = [
 				'name' => $nama,
+				'usrname' => $user,
 				'email' => $mail,
 				'password' => $passwrd,
 				'role_id' => $roleusr,
@@ -92,8 +95,8 @@ class User extends CI_Controller
 			$data['role'] = $this->m_roleuser->getAllRoleuser();
 		}
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$this->form_validation->set_rules('nama', 'Nama', 'required');
 		$this->form_validation->set_rules('roleusr', 'Role User', 'required');

@@ -17,8 +17,8 @@ class Dojo extends CI_Controller
 
 		$data['dojo'] = $this->m_dojo->getAllDojo();
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/topbar', $data);
@@ -32,8 +32,8 @@ class Dojo extends CI_Controller
 		$data['judul'] = 'Dojo';
 		$data['subjudul'] = 'Form Tambah Dojo';
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$this->form_validation->set_rules('namadojo', 'Nama Dojo', 'required');
 
@@ -63,8 +63,8 @@ class Dojo extends CI_Controller
 
 		$data['dojo'] = $this->m_dojo->getDojoById($id);
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$this->form_validation->set_rules('namadojo', 'Nama Dojo', 'required');
 

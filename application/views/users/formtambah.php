@@ -37,8 +37,13 @@
                   <small class="form-text text-danger"><?= form_error('nama'); ?></small>
                 </div>
                 <div class="form-group">
+                  <label for="user">Username</label>
+                  <input type="text" class="form-control col-md-3" id="user" name="user" placeholder="Enter Username">
+                  <small class="form-text text-danger"><?= form_error('user'); ?></small>
+                </div>
+                <div class="form-group">
                   <label for="mail">Email</label>
-                  <input type="text" class="form-control col-md-4" id="mail" name="mail" placeholder="Enter Email">
+                  <input type="text" class="form-control col-md-4" id="mail" name="mail" placeholder="Enter Email (optional)">
                   <small class="form-text text-danger"><?= form_error('mail'); ?></small>
                 </div>
                 <div class="form-group">

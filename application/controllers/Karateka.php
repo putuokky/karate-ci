@@ -20,8 +20,8 @@ class Karateka extends CI_Controller
 
 		$data['biodata'] = $this->m_karate->getAllKarate();
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/topbar', $data);
@@ -35,8 +35,8 @@ class Karateka extends CI_Controller
 		$data['judul'] = 'Karateka';
 		$data['subjudul'] = 'Form Tambah Karateka';
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$data['nama'] = $this->m_biodata->getBiodataByStatus();
 		$data['sabuk'] = $this->m_sabuk->getAllSabuk();
@@ -77,8 +77,8 @@ class Karateka extends CI_Controller
 		$data['judul'] = 'Karateka';
 		$data['subjudul'] = 'Detail Karateka';
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$data['biodata'] = $this->m_biodata->getBiodataById($id);
 		$data['karate'] = $this->m_karate->getKarateByIdBio($id);
@@ -95,8 +95,8 @@ class Karateka extends CI_Controller
 		$data['judul'] = 'Karateka';
 		$data['subjudul'] = 'Detail Ujian';
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$data['karate'] = $this->m_karate->getKarateById($id);
 
@@ -128,8 +128,8 @@ class Karateka extends CI_Controller
 		$data['judul'] = 'Karateka';
 		$data['subjudul'] = 'Detail Ijasah';
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$data['karate'] = $this->m_karate->getKarateById($id);
 		$data['bio'] = $this->m_biodata->getAllBiodata();

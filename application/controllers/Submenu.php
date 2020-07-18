@@ -18,8 +18,8 @@ class Submenu extends CI_Controller
 
 		$data['submenu'] = $this->m_submenu->getAllSubMenu();
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/topbar', $data);
@@ -35,8 +35,8 @@ class Submenu extends CI_Controller
 
 		$data['menu'] = $this->m_menu->getAllMenu();
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$this->form_validation->set_rules('submenu', 'SubMenu', 'required');
 		$this->form_validation->set_rules('url', 'URL', 'required|valid_url');
@@ -80,8 +80,8 @@ class Submenu extends CI_Controller
 		$data['submenu'] = $this->m_submenu->getSubMenuById($id);
 		$data['menu'] = $this->m_menu->getAllMenu();
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$this->form_validation->set_rules('submenu', 'SubMenu', 'required');
 		$this->form_validation->set_rules('url', 'URL', 'required');

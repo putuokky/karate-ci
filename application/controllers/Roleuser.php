@@ -18,8 +18,8 @@ class Roleuser extends CI_Controller
 
 		$data['role'] = $this->m_roleuser->getAllRoleusers();
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/topbar', $data);
@@ -33,8 +33,8 @@ class Roleuser extends CI_Controller
 		$data['judul'] = 'Role User';
 		$data['subjudul'] = 'Form Tambah Role User';
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$this->form_validation->set_rules('roleusr', 'Role User', 'required');
 
@@ -64,8 +64,8 @@ class Roleuser extends CI_Controller
 
 		$data['role'] = $this->m_roleuser->getRoleuserById($id);
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$this->form_validation->set_rules('roleusr', 'Role User', 'required');
 
@@ -97,8 +97,8 @@ class Roleuser extends CI_Controller
 		$data['role'] = $this->m_roleuser->getRoleuserById($id);
 		$data['menu'] = $this->m_menu->getAllMenuBy();
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/topbar', $data);

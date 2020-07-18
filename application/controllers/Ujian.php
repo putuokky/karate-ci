@@ -18,8 +18,8 @@ class Ujian extends CI_Controller
 		$data['judul'] = 'Ujian';
 		$data['subjudul'] = 'Data Ujian';
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$data['karate'] = $this->m_karate->getKarateByTglUjian();
 

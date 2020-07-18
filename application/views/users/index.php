@@ -45,7 +45,7 @@
                     <th>No</th>
                     <th>Opsi</th>
                     <th>Nama</th>
-                    <th>Email</th>
+                    <th>Username</th>
                     <th>Role User</th>
                     <th>Status</th>
                     <th>Date Created</th>
@@ -56,7 +56,7 @@
                     <th>No</th>
                     <th>Opsi</th>
                     <th>Nama</th>
-                    <th>Email</th>
+                    <th>Username</th>
                     <th>Role User</th>
                     <th>Status</th>
                     <th>Date Created</th>
@@ -72,7 +72,7 @@
                         <a href="" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modal-default"><i class="fas fa-trash"></i> Hapus</a>
                       </td>
                       <td><?= $us['name']; ?></td>
-                      <td><?= $us['email']; ?></td>
+                      <td><?= $us['usrname']; ?></td>
                       <td><?= $us['role']; ?></td>
                       <td><?php
                           if ($us['is_active'] == 1) { ?>

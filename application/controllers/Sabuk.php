@@ -17,8 +17,8 @@ class Sabuk extends CI_Controller
 
 		$data['sabuk'] = $this->m_sabuk->getAllSabuk();
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/topbar', $data);
@@ -32,8 +32,8 @@ class Sabuk extends CI_Controller
 		$data['judul'] = 'Sabuk';
 		$data['subjudul'] = 'Form Tambah Sabuk';
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$this->form_validation->set_rules('namasabuk', 'Nama Sabuk', 'required');
 		$this->form_validation->set_rules('warnasabuk', 'Warna Sabuk', 'required');
@@ -72,8 +72,8 @@ class Sabuk extends CI_Controller
 
 		$data['sabuk'] = $this->m_sabuk->getSabukById($id);
 
-		$maile = $this->session->userdata('email');
-		$data['userlogin'] = $this->m_user->getUserByMail($maile);
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
 
 		$this->form_validation->set_rules('namasabuk', 'Nama Sabuk', 'required');
 		$this->form_validation->set_rules('warnasabuk', 'Warna Sabuk', 'required');
