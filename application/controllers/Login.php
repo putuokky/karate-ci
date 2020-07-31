@@ -7,11 +7,26 @@ class Login extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('model_user', 'm_user');
+		$this->load->model('model_config', 'm_config');
 	}
 
 	public function index()
 	{
 		$data['judul'] = 'Login';
+
+		// konten default pada template wajib isi
+		$data_config = $this->m_config->getConfig('brand');
+		$data['brand'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('main_header');
+		$data['main_header'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('main_footer');
+		$data['main_footer'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('version');
+		$data['version'] = $data_config->config_value;
+		// end konten default pada template wajib isi
 
 		$this->form_validation->set_rules('usr', 'Username', 'required');
 		$this->form_validation->set_rules('passw', 'Password', 'required');

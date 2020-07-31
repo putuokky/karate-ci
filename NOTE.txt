@@ -11,7 +11,7 @@ Framework
 
 - Dashboard 
  * isi grafik? belum ada 
- * jumlah tiap sabuk belum
+ * sabuk 'Hitam' gak bisa, anehhh
 - Menu
  * untuk hapus (supaya bisa pake modal)
  * opsi status aktif/non aktif supaya pake modal saja
@@ -41,3 +41,6 @@ Framework
   * saat nambah ijasah, otomatis jadi sabuk berikutnya, misal dari sabuk 1 ke sabuk 2
 - biodata
  * untuk hapus (supaya bisa pake modal)
+- config
+ * untuk hapus (supaya bisa pake modal)
+ * view belum sesuai apakah pake tabel apa form

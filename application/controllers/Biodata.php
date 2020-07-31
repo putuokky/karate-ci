@@ -6,8 +6,9 @@ class Biodata extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Model_biodata', 'm_biodata');
 		$this->load->model('model_user', 'm_user');
+		$this->load->model('model_config', 'm_config');
+		$this->load->model('Model_biodata', 'm_biodata');
 		$this->load->model('Model_dojo', 'm_dojo');
 		$this->load->model('Model_sabuk', 'm_sabuk');
 	}
@@ -17,10 +18,26 @@ class Biodata extends CI_Controller
 		$data['judul'] = 'Biodata';
 		$data['subjudul'] = 'Data Biodata';
 
-		$data['biodata'] = $this->m_biodata->getAllBiodata();
-
+		// untuk session login wajib isi
 		$user = $this->session->userdata('usrname');
 		$data['userlogin'] = $this->m_user->getUserByUser($user);
+		// end untuk session login wajib isi
+
+		// konten default pada template wajib isi
+		$data_config = $this->m_config->getConfig('brand');
+		$data['brand'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('main_header');
+		$data['main_header'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('main_footer');
+		$data['main_footer'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('version');
+		$data['version'] = $data_config->config_value;
+		// end konten default pada template wajib isi
+
+		$data['biodata'] = $this->m_biodata->getAllBiodata();
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/topbar', $data);
@@ -34,8 +51,24 @@ class Biodata extends CI_Controller
 		$data['judul'] = 'Biodata';
 		$data['subjudul'] = 'Form Tambah Biodata';
 
+		// untuk session login wajib isi
 		$user = $this->session->userdata('usrname');
 		$data['userlogin'] = $this->m_user->getUserByUser($user);
+		// end untuk session login wajib isi
+
+		// konten default pada template wajib isi
+		$data_config = $this->m_config->getConfig('brand');
+		$data['brand'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('main_header');
+		$data['main_header'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('main_footer');
+		$data['main_footer'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('version');
+		$data['version'] = $data_config->config_value;
+		// end konten default pada template wajib isi
 
 		$data['dojo'] = $this->m_dojo->getAllDojo();
 
@@ -77,11 +110,27 @@ class Biodata extends CI_Controller
 		$data['judul'] = 'Biodata';
 		$data['subjudul'] = 'Form Ubah Biodata';
 
-		$data['biodata'] = $this->m_biodata->getBiodataById($id);
-		$data['dojo'] = $this->m_dojo->getAllDojo();
-
+		// untuk session login wajib isi
 		$user = $this->session->userdata('usrname');
 		$data['userlogin'] = $this->m_user->getUserByUser($user);
+		// end untuk session login wajib isi
+
+		// konten default pada template wajib isi
+		$data_config = $this->m_config->getConfig('brand');
+		$data['brand'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('main_header');
+		$data['main_header'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('main_footer');
+		$data['main_footer'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('version');
+		$data['version'] = $data_config->config_value;
+		// end konten default pada template wajib isi
+
+		$data['biodata'] = $this->m_biodata->getBiodataById($id);
+		$data['dojo'] = $this->m_dojo->getAllDojo();
 
 		$this->form_validation->set_rules('nama', 'Nama', 'required');
 		$this->form_validation->set_rules('tempat_lahir', 'Tempat Lahir', 'required');

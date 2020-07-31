@@ -7,6 +7,7 @@ class Karateka extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('model_user', 'm_user');
+		$this->load->model('model_config', 'm_config');
 		$this->load->model('Model_biodata', 'm_biodata');
 		$this->load->model('Model_dojo', 'm_dojo');
 		$this->load->model('Model_karate', 'm_karate');
@@ -18,10 +19,26 @@ class Karateka extends CI_Controller
 		$data['judul'] = 'Karateka';
 		$data['subjudul'] = 'Data Karateka';
 
-		$data['biodata'] = $this->m_karate->getAllKarate();
-
+		// untuk session login wajib isi
 		$user = $this->session->userdata('usrname');
 		$data['userlogin'] = $this->m_user->getUserByUser($user);
+		// end untuk session login wajib isi
+
+		// konten default pada template wajib isi
+		$data_config = $this->m_config->getConfig('brand');
+		$data['brand'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('main_header');
+		$data['main_header'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('main_footer');
+		$data['main_footer'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('version');
+		$data['version'] = $data_config->config_value;
+		// end konten default pada template wajib isi
+
+		$data['biodata'] = $this->m_karate->getAllKarate();
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/topbar', $data);
@@ -35,8 +52,24 @@ class Karateka extends CI_Controller
 		$data['judul'] = 'Karateka';
 		$data['subjudul'] = 'Form Tambah Karateka';
 
+		// untuk session login wajib isi
 		$user = $this->session->userdata('usrname');
 		$data['userlogin'] = $this->m_user->getUserByUser($user);
+		// end untuk session login wajib isi
+
+		// konten default pada template wajib isi
+		$data_config = $this->m_config->getConfig('brand');
+		$data['brand'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('main_header');
+		$data['main_header'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('main_footer');
+		$data['main_footer'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('version');
+		$data['version'] = $data_config->config_value;
+		// end konten default pada template wajib isi
 
 		$data['nama'] = $this->m_biodata->getBiodataByStatus();
 		$data['sabuk'] = $this->m_sabuk->getAllSabuk();
@@ -77,8 +110,24 @@ class Karateka extends CI_Controller
 		$data['judul'] = 'Karateka';
 		$data['subjudul'] = 'Detail Karateka';
 
+		// untuk session login wajib isi
 		$user = $this->session->userdata('usrname');
 		$data['userlogin'] = $this->m_user->getUserByUser($user);
+		// end untuk session login wajib isi
+
+		// konten default pada template wajib isi
+		$data_config = $this->m_config->getConfig('brand');
+		$data['brand'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('main_header');
+		$data['main_header'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('main_footer');
+		$data['main_footer'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('version');
+		$data['version'] = $data_config->config_value;
+		// end konten default pada template wajib isi
 
 		$data['biodata'] = $this->m_biodata->getBiodataById($id);
 		$data['karate'] = $this->m_karate->getKarateByIdBio($id);
@@ -95,8 +144,24 @@ class Karateka extends CI_Controller
 		$data['judul'] = 'Karateka';
 		$data['subjudul'] = 'Detail Ujian';
 
+		// untuk session login wajib isi
 		$user = $this->session->userdata('usrname');
 		$data['userlogin'] = $this->m_user->getUserByUser($user);
+		// end untuk session login wajib isi
+
+		// konten default pada template wajib isi
+		$data_config = $this->m_config->getConfig('brand');
+		$data['brand'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('main_header');
+		$data['main_header'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('main_footer');
+		$data['main_footer'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('version');
+		$data['version'] = $data_config->config_value;
+		// end konten default pada template wajib isi
 
 		$data['karate'] = $this->m_karate->getKarateById($id);
 
@@ -128,8 +193,24 @@ class Karateka extends CI_Controller
 		$data['judul'] = 'Karateka';
 		$data['subjudul'] = 'Detail Ijasah';
 
+		// untuk session login wajib isi
 		$user = $this->session->userdata('usrname');
 		$data['userlogin'] = $this->m_user->getUserByUser($user);
+		// end untuk session login wajib isi
+
+		// konten default pada template wajib isi
+		$data_config = $this->m_config->getConfig('brand');
+		$data['brand'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('main_header');
+		$data['main_header'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('main_footer');
+		$data['main_footer'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('version');
+		$data['version'] = $data_config->config_value;
+		// end konten default pada template wajib isi
 
 		$data['karate'] = $this->m_karate->getKarateById($id);
 		$data['bio'] = $this->m_biodata->getAllBiodata();

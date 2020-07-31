@@ -8,7 +8,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="<?= base_url('log/dashboard'); ?>" class="nav-link"><b>disini nama aplikasi lengkap</b></a>
+        <a href="<?= base_url('log/dashboard'); ?>" class="nav-link"><b><?= $main_header; ?></b></a>
       </li>
     </ul>
   </nav>
@@ -19,7 +19,7 @@
     <!-- Brand Logo -->
     <a href="<?= base_url('log/dashboard'); ?>" class="brand-link">
       <img src="<?= base_url('assets'); ?>/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <span class="brand-text font-weight-light"><?= $brand; ?></span>
     </a>
 
     <!-- Sidebar -->

@@ -6,8 +6,9 @@ class Sabuk extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Model_sabuk', 'm_sabuk');
 		$this->load->model('model_user', 'm_user');
+		$this->load->model('model_config', 'm_config');
+		$this->load->model('Model_sabuk', 'm_sabuk');
 	}
 
 	public function index()
@@ -15,10 +16,26 @@ class Sabuk extends CI_Controller
 		$data['judul'] = 'Sabuk';
 		$data['subjudul'] = 'Data Sabuk';
 
-		$data['sabuk'] = $this->m_sabuk->getAllSabuk();
-
+		// untuk session login wajib isi
 		$user = $this->session->userdata('usrname');
 		$data['userlogin'] = $this->m_user->getUserByUser($user);
+		// end untuk session login wajib isi
+
+		// konten default pada template wajib isi
+		$data_config = $this->m_config->getConfig('brand');
+		$data['brand'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('main_header');
+		$data['main_header'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('main_footer');
+		$data['main_footer'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('version');
+		$data['version'] = $data_config->config_value;
+		// end konten default pada template wajib isi
+
+		$data['sabuk'] = $this->m_sabuk->getAllSabuk();
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/topbar', $data);
@@ -32,8 +49,24 @@ class Sabuk extends CI_Controller
 		$data['judul'] = 'Sabuk';
 		$data['subjudul'] = 'Form Tambah Sabuk';
 
+		// untuk session login wajib isi
 		$user = $this->session->userdata('usrname');
 		$data['userlogin'] = $this->m_user->getUserByUser($user);
+		// end untuk session login wajib isi
+
+		// konten default pada template wajib isi
+		$data_config = $this->m_config->getConfig('brand');
+		$data['brand'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('main_header');
+		$data['main_header'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('main_footer');
+		$data['main_footer'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('version');
+		$data['version'] = $data_config->config_value;
+		// end konten default pada template wajib isi
 
 		$this->form_validation->set_rules('namasabuk', 'Nama Sabuk', 'required');
 		$this->form_validation->set_rules('warnasabuk', 'Warna Sabuk', 'required');
@@ -70,10 +103,26 @@ class Sabuk extends CI_Controller
 		$data['judul'] = 'Sabuk';
 		$data['subjudul'] = 'Form Ubah Sabuk';
 
-		$data['sabuk'] = $this->m_sabuk->getSabukById($id);
-
+		// untuk session login wajib isi
 		$user = $this->session->userdata('usrname');
 		$data['userlogin'] = $this->m_user->getUserByUser($user);
+		// end untuk session login wajib isi
+
+		// konten default pada template wajib isi
+		$data_config = $this->m_config->getConfig('brand');
+		$data['brand'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('main_header');
+		$data['main_header'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('main_footer');
+		$data['main_footer'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('version');
+		$data['version'] = $data_config->config_value;
+		// end konten default pada template wajib isi
+
+		$data['sabuk'] = $this->m_sabuk->getSabukById($id);
 
 		$this->form_validation->set_rules('namasabuk', 'Nama Sabuk', 'required');
 		$this->form_validation->set_rules('warnasabuk', 'Warna Sabuk', 'required');

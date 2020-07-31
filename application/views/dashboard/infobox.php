@@ -8,7 +8,7 @@
 
         <div class="info-box-content">
           <span class="info-box-text">Sabuk <?= $sbk['nama_sabuk']; ?></span>
-          <span class="info-box-number">2,000</span>
+          <span class="info-box-number"><?= $sbk['jml']; ?></span>
         </div>
         <!-- /.info-box-content -->
       </div>

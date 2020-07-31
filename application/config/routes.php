@@ -82,3 +82,6 @@ $route['log/biodata/(:any)/(:num)'] = 'biodata/$1/$2';
 
 $route['log/ujian(/:any)?'] = 'ujian$1';
 $route['log/ujian/(:any)/(:num)'] = 'ujian/$1/$2';
+
+$route['log/config(/:any)?'] = 'config$1';
+$route['log/config/(:any)/(:num)'] = 'config/$1/$2';
