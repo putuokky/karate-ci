@@ -31,11 +31,14 @@ class Ujian extends CI_Controller
 		$data_config = $this->m_config->getConfig('main_header');
 		$data['main_header'] = $data_config->config_value;
 
-		$data_config = $this->m_config->getConfig('main_footer');
-		$data['main_footer'] = $data_config->config_value;
-
 		$data_config = $this->m_config->getConfig('version');
 		$data['version'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('nama_pengembang');
+		$data['nama_pengembang'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('link_pengembang');
+		$data['link_pengembang'] = $data_config->config_value;
 		// end konten default pada template wajib isi
 
 		$data['karate'] = $this->m_karate->getKarateByTglUjian();

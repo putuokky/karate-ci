@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 24 Sep 2020 pada 10.30
+-- Waktu pembuatan: 24 Sep 2020 pada 11.13
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.4.6
 
@@ -503,10 +503,11 @@ CREATE TABLE `config` (
 --
 
 INSERT INTO `config` (`id_config`, `nama_config`, `config_value`) VALUES
-(1, 'brand', 'SIKARAT'),
-(2, 'main_header', 'Sistem Pengelolaan Data Karateka'),
-(3, 'main_footer', 'SIKARAT'),
-(4, 'version', '1.07.20');
+(1, 'brand', 'SIKUDACHI'),
+(2, 'main_header', 'Sistem Informasi Kushin Ryu Denpasar Terchinta'),
+(4, 'version', '1.07.20'),
+(5, 'nama_pengembang', 'mahesora.id'),
+(6, 'link_pengembang', 'http://www.mahesora.id/');
 
 -- --------------------------------------------------------
 
@@ -1979,7 +1980,7 @@ ALTER TABLE `biodata`
 -- AUTO_INCREMENT untuk tabel `config`
 --
 ALTER TABLE `config`
-  MODIFY `id_config` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_config` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `dojo`
