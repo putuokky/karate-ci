@@ -2,8 +2,8 @@
     <div class="float-right d-none d-sm-block">
       <b>Version</b> <?= $version; ?>
     </div>
-    <strong>Copyright &copy; <?= date('Y'); ?> <a href="<?= base_url('log/dashboard'); ?>"><?= $main_footer; ?></a>.</strong> All rights
-    reserved.
+    <strong>Copyright &copy; <?= date('Y'); ?> <a href="<?= base_url('log/dashboard'); ?>"><?= $main_footer; ?></a>.</strong> All rights reserved. Developement by <a href="#" target="_blank">okky</a>
+
   </footer>
 
   <!-- Control Sidebar -->

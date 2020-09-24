@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 18 Jul 2020 pada 09.59
+-- Waktu pembuatan: 24 Sep 2020 pada 10.30
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.4.6
 
@@ -484,9 +484,29 @@ INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis
 (440, 'Made Budiartawan', 'Denpasar', '2007-08-07', 1, 12, 1),
 (441, 'Made Budiarta', 'Denpasar', '2007-08-07', 1, 12, 1),
 (442, 'Ni Komang Shila Tri Ardani', 'Denpasar', '2009-04-14', 2, 15, 1),
-(443, 'Nurul Laily Azizah', 'Denpasar', '2007-08-17', 2, 16, 1),
-(448, 'tesss', 'tes', '2020-07-16', 1, 3, 1),
-(449, 'wwwww', 'wwww', '2020-07-01', 2, 5, 1);
+(443, 'Nurul Laily Azizah', 'Denpasar', '2007-08-17', 2, 16, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `config`
+--
+
+CREATE TABLE `config` (
+  `id_config` int(11) NOT NULL,
+  `nama_config` varchar(200) NOT NULL,
+  `config_value` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `config`
+--
+
+INSERT INTO `config` (`id_config`, `nama_config`, `config_value`) VALUES
+(1, 'brand', 'SIKARAT'),
+(2, 'main_header', 'Sistem Pengelolaan Data Karateka'),
+(3, 'main_footer', 'SIKARAT'),
+(4, 'version', '1.07.20');
 
 -- --------------------------------------------------------
 
@@ -521,7 +541,11 @@ INSERT INTO `dojo` (`id_dojo`, `nama_dojo`) VALUES
 (15, 'SD 22 Dauh Puri'),
 (16, 'SD 1 Ubung'),
 (17, 'Permata Bumi'),
-(18, 'Santo Yoseph');
+(18, 'Santo Yoseph'),
+(20, 'Batur Selatan'),
+(21, 'BBS Reborn'),
+(22, 'Br Biaung'),
+(23, 'SD 18 Dangri');
 
 -- --------------------------------------------------------
 
@@ -534,7 +558,7 @@ CREATE TABLE `karateka` (
   `biodata` int(11) NOT NULL,
   `sabuk` int(11) NOT NULL,
   `tgl_ujian` date DEFAULT NULL,
-  `no_ijasah` varchar(100) DEFAULT NULL,
+  `no_ijasah` text DEFAULT NULL,
   `tgl_ijasah` date DEFAULT NULL,
   `nilai_rata` decimal(11,2) DEFAULT NULL,
   `is_active` int(11) NOT NULL
@@ -1709,10 +1733,7 @@ INSERT INTO `karateka` (`id_karateka`, `biodata`, `sabuk`, `tgl_ujian`, `no_ijas
 (1161, 443, 3, NULL, '', NULL, '0.00', 0),
 (1162, 443, 4, NULL, '', NULL, '0.00', 0),
 (1163, 443, 5, '2018-11-25', '529/P.PROV-KKI/IV/2019', '2019-04-30', '70.70', 0),
-(1164, 443, 6, NULL, '', NULL, '0.00', 1),
-(1169, 448, 1, NULL, NULL, NULL, NULL, 1),
-(1170, 449, 2, '2020-07-03', 'fffff', '2020-07-31', '9.74', 0),
-(1173, 449, 2, NULL, NULL, NULL, NULL, 1);
+(1164, 443, 6, NULL, '', NULL, '0.00', 1);
 
 -- --------------------------------------------------------
 
@@ -1767,7 +1788,7 @@ INSERT INTO `user` (`id`, `name`, `usrname`, `email`, `password`, `role_id`, `is
 (1, 'Okky Maheswara', 'putuokky', 'okkymahes@gmail.com', '$2y$10$p7MPGe3IGqcWU5TIyEFCEuH/BqcPqlYnArP5YvFaAVJ6MMdptaz/a', 1, 1, 1585405006),
 (2, 'admin', '', 'admin@gmail.com', '$2y$10$7.1knAbxrSPSzaTSv0pspOttoD/qfey53MAS7hJoDQ1ubfKlMB69C', 2, 1, 1585571523),
 (3, 'aaaa', '', 'aaa@gmail.com', '$2y$10$q5p.yYgcokvTylethFwpwe7.tnG0qnUujLHcu3t3363h/RKT99106', 3, 1, 1593428955),
-(4, 'qqqq', 'qqq', '', '$2y$10$BUixSsVN9ewpuiu.BLE2OOPv0fFoNeePHuthsTEGwGSSMEzt4jXnG', 1, 1, 1595059119);
+(4, 'wwww', 'qqq', '', '$2y$10$BUixSsVN9ewpuiu.BLE2OOPv0fFoNeePHuthsTEGwGSSMEzt4jXnG', 1, 0, 1595059607);
 
 -- --------------------------------------------------------
 
@@ -1870,6 +1891,7 @@ INSERT INTO `user_sub_menu` (`id_user_sub_menu`, `menu_id`, `submenu`, `url`, `i
 (3, 4, 'Biodata', 'log/biodata', 'nav-icon fas fa-id-card-alt', 1, 1),
 (4, 4, 'Karateka', 'log/karateka', 'nav-icon far fa-image', 1, 2),
 (5, 4, 'Ujian', 'log/ujian', 'nav-icon fas fa-file-signature', 1, 3),
+(6, 4, 'Ijasah', 'log/ijasah', 'nav-icon fas fa-file', 1, 4),
 (7, 2, 'Sabuk', 'log/sabuk', 'nav-icon fas fa-child', 1, 2),
 (8, 3, 'Role User', 'log/roleuser', 'nav-icon fas fa-users-cog', 1, 2),
 (9, 3, 'Menu Management', 'log/menu', 'nav-icon fas fa-folder', 1, 3),
@@ -1888,6 +1910,12 @@ INSERT INTO `user_sub_menu` (`id_user_sub_menu`, `menu_id`, `submenu`, `url`, `i
 --
 ALTER TABLE `biodata`
   ADD PRIMARY KEY (`id_biodata`);
+
+--
+-- Indeks untuk tabel `config`
+--
+ALTER TABLE `config`
+  ADD PRIMARY KEY (`id_config`);
 
 --
 -- Indeks untuk tabel `dojo`
@@ -1945,19 +1973,25 @@ ALTER TABLE `user_sub_menu`
 -- AUTO_INCREMENT untuk tabel `biodata`
 --
 ALTER TABLE `biodata`
-  MODIFY `id_biodata` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=450;
+  MODIFY `id_biodata` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=448;
+
+--
+-- AUTO_INCREMENT untuk tabel `config`
+--
+ALTER TABLE `config`
+  MODIFY `id_config` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `dojo`
 --
 ALTER TABLE `dojo`
-  MODIFY `id_dojo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id_dojo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT untuk tabel `karateka`
 --
 ALTER TABLE `karateka`
-  MODIFY `id_karateka` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1174;
+  MODIFY `id_karateka` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1168;
 
 --
 -- AUTO_INCREMENT untuk tabel `sabuk`
