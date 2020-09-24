@@ -35,7 +35,9 @@
                   <?= $subjudul; ?> Sukses <?= $this->session->flashdata('message'); ?>.
                 </div>
               <?php endif; ?>
-              <h3>Nama : <?= $biodata['nama']; ?></h3>
+              <h3>Nama : <b><?= $biodata['nama']; ?></b></h3>
+              <h3>Dojo : <b><?= $dojo['nama_dojo']; ?></b></h3>
+              <br>
               <a href="<?= base_url('log/karateka'); ?>" class="btn btn-md btn-info">Kembali</a>
             </div>
             <!-- /.card-header -->
