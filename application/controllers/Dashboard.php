@@ -39,8 +39,6 @@ class Dashboard extends CI_Controller
 		$data['link_pengembang'] = $data_config->config_value;
 		// end konten default pada template wajib isi
 
-		$data['sabuk'] = $this->m_sabuk->getJumlahSabuk();
-
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/topbar', $data);
 		$this->load->view('templates/sidebar');

@@ -21,6 +21,7 @@
   <section class="content">
 
     <?php
+    $this->load->view('dashboard/bg-web');
     $this->load->view('dashboard/infobox');
     ?>
     <div class="card">
