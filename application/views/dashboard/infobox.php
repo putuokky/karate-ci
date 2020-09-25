@@ -13,7 +13,7 @@
           <span class="info-box-text">Sabuk <?= $sqlsbk['nama_sabuk'] . " (" . $sqlsbk['tingkatan_sabuk'] . ")"; ?></span>
           <?php
           $idsabuk = $sqlsbk['id_sabuk'];
-          $queryjmlhsabuk = "SELECT COUNT(*) as jml FROM karateka WHERE sabuk = $idsabuk";
+          $queryjmlhsabuk = "SELECT COUNT(*) as jml FROM karateka WHERE sabuk = $idsabuk && is_active = 1";
           $sqljmlhsabuk = $this->db->query($queryjmlhsabuk)->result_array();
 
           foreach ($sqljmlhsabuk as $sqljmsbk) : ?>
