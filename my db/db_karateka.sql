@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 30 Sep 2020 pada 10.58
+-- Waktu pembuatan: 30 Sep 2020 pada 14.07
 -- Versi server: 10.4.14-MariaDB
 -- Versi PHP: 7.4.10
 
@@ -2615,7 +2615,6 @@ CREATE TABLE `user` (
   `id` int(11) NOT NULL,
   `name` varchar(128) NOT NULL,
   `usrname` varchar(128) NOT NULL,
-  `email` varchar(128) DEFAULT NULL,
   `password` varchar(256) NOT NULL,
   `role_id` int(11) NOT NULL,
   `is_active` int(1) NOT NULL,
@@ -2626,11 +2625,9 @@ CREATE TABLE `user` (
 -- Dumping data untuk tabel `user`
 --
 
-INSERT INTO `user` (`id`, `name`, `usrname`, `email`, `password`, `role_id`, `is_active`, `date_user`) VALUES
-(1, 'Okky Maheswara', 'putuokky', 'okkymahes@gmail.com', '$2y$10$p7MPGe3IGqcWU5TIyEFCEuH/BqcPqlYnArP5YvFaAVJ6MMdptaz/a', 1, 1, 1585405006),
-(2, 'admin', '', 'admin@gmail.com', '$2y$10$7.1knAbxrSPSzaTSv0pspOttoD/qfey53MAS7hJoDQ1ubfKlMB69C', 2, 1, 1585571523),
-(3, 'aaaa', '', 'aaa@gmail.com', '$2y$10$q5p.yYgcokvTylethFwpwe7.tnG0qnUujLHcu3t3363h/RKT99106', 3, 1, 1593428955),
-(4, 'wwww', 'qqq', '', '$2y$10$BUixSsVN9ewpuiu.BLE2OOPv0fFoNeePHuthsTEGwGSSMEzt4jXnG', 1, 0, 1595059607);
+INSERT INTO `user` (`id`, `name`, `usrname`, `password`, `role_id`, `is_active`, `date_user`) VALUES
+(1, 'Okky Maheswara', 'putuokky', '$2y$10$p7MPGe3IGqcWU5TIyEFCEuH/BqcPqlYnArP5YvFaAVJ6MMdptaz/a', 1, 1, 1585405006),
+(5, 'Admin Satu', 'adminsatu', '$2y$10$nVkYpnIvHHDZNxiMdKA7m.kBALyRzj4lCTpOFI0VUIQ22uF/26696', 2, 1, 1601467411);
 
 -- --------------------------------------------------------
 
@@ -2738,8 +2735,7 @@ INSERT INTO `user_sub_menu` (`id_user_sub_menu`, `menu_id`, `submenu`, `url`, `i
 (10, 3, 'SubMenu Management', 'log/submenu', 'nav-icon fas fa-folder-open', 1, 4),
 (11, 3, 'Configuration', 'log/config', 'nav-icon fas fa-cogs', 1, 5),
 (13, 6, 'Dashboard', 'log/dashboard', 'nav-icon fas fa-tachometer-alt', 1, 1),
-(14, 8, 'User', 'log/user', 'nav-icon fas fa-user', 1, 1),
-(16, 8, 'Configuration', 'log/config', 'nav-icon fas fa-cogs', 1, 2);
+(14, 8, 'User', 'log/user', 'nav-icon fas fa-user', 1, 1);
 
 --
 -- Indexes for dumped tables
@@ -2843,7 +2839,7 @@ ALTER TABLE `sabuk`
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `user_access_menu`

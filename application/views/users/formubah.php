@@ -43,11 +43,6 @@
                   <small class="form-text text-danger"><?= form_error('user'); ?></small>
                 </div>
                 <div class="form-group">
-                  <label for="mail">Email</label>
-                  <input type="text" class="form-control col-md-4" id="mail" name="mail" placeholder="Enter Email" value="<?= $user['email']; ?>" readonly>
-                  <small class="form-text text-danger"><?= form_error('mail'); ?></small>
-                </div>
-                <div class="form-group">
                   <label for="roleusr">Role User</label>
                   <select class="form-control col-md-4 select2bs4" name="roleusr">
                     <option value="0">-</option>
@@ -65,8 +60,14 @@
                   <label for="exampleInputFile">Status</label>
                   <div class="input-group">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" value="1" id="status" name="status" checked>
-                      <label class="form-check-label" for="status">Aktif</label>
+                      <?php
+                      if ($user['is_active'] == 1) { ?>
+                        <input type="checkbox" class="form-check-input" value="1" id="status" name="status" checked>
+                        <label class="form-check-label" for="status">Aktif</label>
+                      <?php } else if ($user['is_active'] == 0) { ?>
+                        <input type="checkbox" class="form-check-input" value="1" id="status" name="status">
+                        <label class="form-check-label" for="status">Aktif</label>
+                      <?php }  ?>
                     </div>
                   </div>
                 </div>

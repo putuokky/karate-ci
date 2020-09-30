@@ -42,11 +42,6 @@
                   <small class="form-text text-danger"><?= form_error('user'); ?></small>
                 </div>
                 <div class="form-group">
-                  <label for="mail">Email</label>
-                  <input type="text" class="form-control col-md-4" id="mail" name="mail" placeholder="Enter Email (optional)">
-                  <small class="form-text text-danger"><?= form_error('mail'); ?></small>
-                </div>
-                <div class="form-group">
                   <label for="passwrd">Password</label>
                   <input type="text" class="form-control col-md-4" id="passwrd" name="passwrd" placeholder="Enter Password">
                   <small class="form-text text-danger"><?= form_error('passwrd'); ?></small>

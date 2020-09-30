@@ -60,18 +60,18 @@ class Login extends CI_Controller
 					redirect('login');
 				}
 			} else {
-				$this->session->set_flashdata('message', 'This email has not been activated!');
+				$this->session->set_flashdata('message', 'This username has not been activated!');
 				redirect('login');
 			}
 		} else {
-			$this->session->set_flashdata('message', 'Email is not registered!');
+			$this->session->set_flashdata('message', 'Username is not registered!');
 			redirect('login');
 		}
 	}
 
 	public function logout()
 	{
-		$this->session->unset_userdata('email');
+		$this->session->unset_userdata('username');
 		$this->session->unset_userdata('role_id');
 
 		$this->session->set_flashdata('message', 'You have been logged out!');
