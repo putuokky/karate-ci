@@ -5,7 +5,7 @@
   $sqlsabuk = $this->db->get('sabuk')->result_array();
 
   foreach ($sqlsabuk as $sqlsbk) : ?>
-    <div class="col-12 col-sm-6 col-md-3">
+    <div class="col-md-3 col-sm-4">
       <div class="info-box mb-3">
         <span class="info-box-icon elevation-1" style="background-color: <?= $sqlsbk['warna_sabuk']; ?>; color: <?= $sqlsbk['warna_tulisan']; ?>;"><i class="fas fa-users"></i></span>
 

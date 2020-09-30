@@ -46,12 +46,14 @@
                   <label for="exampleInputFile">Status</label>
                   <div class="input-group">
                     <div class="form-check">
-                      <?php if ($menu['is_active_menu'] == 1) : ?>
+                      <?php
+                      if ($menu['is_active_menu'] == 1) { ?>
                         <input type="checkbox" class="form-check-input" value="1" id="status" name="status" checked>
-                      <?php else : ?>
-                        <input type="checkbox" class="form-check-input" value="0" id="status" name="status">
-                      <?php endif ?>
-                      <label class="form-check-label" for="status">Aktif</label>
+                        <label class="form-check-label" for="status">Aktif</label>
+                      <?php } else if ($menu['is_active_menu'] == 0) { ?>
+                        <input type="checkbox" class="form-check-input" value="1" id="status" name="status">
+                        <label class="form-check-label" for="status">Aktif</label>
+                      <?php } ?>
                     </div>
                   </div>
                 </div>

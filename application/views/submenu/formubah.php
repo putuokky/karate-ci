@@ -70,8 +70,14 @@
                   <label for="exampleInputFile">Status</label>
                   <div class="input-group">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" value="1" id="status" name="status" checked>
-                      <label class="form-check-label" for="status">Aktif</label>
+                      <?php
+                      if ($submenu['is_active'] == 1) { ?>
+                        <input type="checkbox" class="form-check-input" value="1" id="status" name="status" checked>
+                        <label class="form-check-label" for="status">Aktif</label>
+                      <?php } else if ($submenu['is_active'] == 0) { ?>
+                        <input type="checkbox" class="form-check-input" value="1" id="status" name="status">
+                        <label class="form-check-label" for="status">Aktif</label>
+                      <?php } ?>
                     </div>
                   </div>
                 </div>
