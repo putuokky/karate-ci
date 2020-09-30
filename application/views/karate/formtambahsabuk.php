@@ -33,10 +33,11 @@
               <div class="card-body">
                 <div class="form-group">
                   <label for="nama">Nama</label>
-                  <select class="form-control col-md-5 select2bs4" name="nama">
-                    <option value="0">-</option>
+                  <select class="form-control col-md-6" name="nama">
                     <?php foreach ($nama as $n) : ?>
-                      <option value="<?= $n['id_biodata']; ?>"><?= $n['nama']; ?></option>
+                      <?php if ($biodata['id_biodata'] == $n['id_biodata']) : ?>
+                        <option value="<?= $n['id_biodata']; ?>" selected><?= $n['nama']; ?></option>
+                      <?php endif ?>
                     <?php endforeach ?>
                   </select>
                   <small class="form-text text-danger"><?= form_error('nama'); ?></small>
@@ -56,7 +57,7 @@
 
               <div class="card-footer">
                 <button type="submit" class="btn btn-primary">Simpan</button>
-                <a href="<?= base_url('log/karateka'); ?>" class="btn btn-default">Cancel</a>
+                <a href="<?= base_url('log/karateka/detail/' . $biodata['id_biodata']); ?>" class="btn btn-default">Cancel</a>
               </div>
             </form>
           </div>

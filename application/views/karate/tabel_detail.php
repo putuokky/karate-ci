@@ -38,7 +38,11 @@
               <h3>Nama : <b><?= $biodata['nama']; ?></b></h3>
               <h3>Dojo : <b><?= $dojo['nama_dojo']; ?></b></h3>
               <br>
-              <a href="<?= base_url('log/karateka'); ?>" class="btn btn-md btn-info">Kembali</a>
+              <a href="<?= base_url('log/karateka'); ?>" class="btn btn-md btn-secondary">Kembali</a>
+              <?php
+              if ($sabuk == null) { ?>
+                <a href="<?= base_url('log/karateka/tambahsabuk/' . $biodata['id_biodata']); ?>" class="btn btn-md btn-primary">Tambah Data Sabuk</a>
+              <?php } ?>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
