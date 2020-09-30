@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 29 Sep 2020 pada 07.48
+-- Waktu pembuatan: 30 Sep 2020 pada 04.12
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.4.6
 
@@ -485,7 +485,7 @@ INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis
 (441, 'Made Budiarta', 'Denpasar', '2007-08-07', 1, 12, 1),
 (442, 'Ni Komang Shila Tri Ardani', 'Denpasar', '2009-04-14', 2, 15, 1),
 (443, 'Nurul Laily Azizah', 'Denpasar', '2007-08-17', 2, 16, 1),
-(448, 'Komang Rubydian Orisa Putri', 'Denpasar', '2010-10-29', 2, 23, 0),
+(448, 'Komang Rubydian Orisa Putri', 'Denpasar', '2010-10-29', 2, 23, 1),
 (449, 'Ni Putu Tata Setyaningrum', 'Denpasar', '2011-03-07', 2, 23, 0),
 (450, 'Putu Trishtan Avara Dhyaksa', 'Denpasar', '2011-07-04', 1, 23, 0),
 (451, 'I Gusti Ngurah Bagus Narendra Narayana', 'Semarang', '2011-08-06', 1, 23, 0),
@@ -2572,7 +2572,9 @@ INSERT INTO `karateka` (`id_karateka`, `biodata`, `sabuk`, `tgl_ujian`, `no_ijas
 (1161, 443, 3, NULL, '', NULL, '0.00', 0),
 (1162, 443, 4, NULL, '', NULL, '0.00', 0),
 (1163, 443, 5, '2018-11-25', '529/P.PROV-KKI/IV/2019', '2019-04-30', '70.70', 0),
-(1164, 443, 6, NULL, '', NULL, '0.00', 1);
+(1164, 443, 6, NULL, '', NULL, '0.00', 1),
+(1168, 448, 2, '2019-12-29', '131/P.PROV-KKI/II/2020', '2020-02-28', '68.60', 0),
+(1169, 448, 3, NULL, NULL, NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -2812,7 +2814,7 @@ ALTER TABLE `user_sub_menu`
 -- AUTO_INCREMENT untuk tabel `biodata`
 --
 ALTER TABLE `biodata`
-  MODIFY `id_biodata` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1470;
+  MODIFY `id_biodata` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1463;
 
 --
 -- AUTO_INCREMENT untuk tabel `config`
@@ -2830,7 +2832,7 @@ ALTER TABLE `dojo`
 -- AUTO_INCREMENT untuk tabel `karateka`
 --
 ALTER TABLE `karateka`
-  MODIFY `id_karateka` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1168;
+  MODIFY `id_karateka` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1170;
 
 --
 -- AUTO_INCREMENT untuk tabel `sabuk`

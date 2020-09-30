@@ -140,7 +140,6 @@ class Karateka extends CI_Controller
 
 		$data['biodata'] = $this->m_biodata->getBiodataById($id);
 		$data['karate'] = $this->m_karate->getKarateByIdBio($id);
-		$data['dojo'] = $this->m_dojo->getDojoById($id);
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/topbar', $data);
