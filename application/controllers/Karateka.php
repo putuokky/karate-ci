@@ -45,7 +45,7 @@ class Karateka extends CI_Controller
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/topbar', $data);
 		$this->load->view('templates/sidebar', $data);
-		$this->load->view('biodata/index', $data);
+		$this->load->view('karate/index', $data);
 		$this->load->view('templates/footer', $data);
 	}
 
@@ -88,7 +88,7 @@ class Karateka extends CI_Controller
 			$this->load->view('templates/header', $data);
 			$this->load->view('templates/topbar', $data);
 			$this->load->view('templates/sidebar', $data);
-			$this->load->view('biodata/formtambah', $data);
+			$this->load->view('karate/formtambah', $data);
 			$this->load->view('templates/footer', $data);
 		} else {
 			$nama = $this->input->post('nama');
@@ -151,7 +151,7 @@ class Karateka extends CI_Controller
 			$this->load->view('templates/header', $data);
 			$this->load->view('templates/topbar', $data);
 			$this->load->view('templates/sidebar', $data);
-			$this->load->view('biodata/formubah', $data);
+			$this->load->view('karate/formubah', $data);
 			$this->load->view('templates/footer', $data);
 		} else {
 			$id = $this->input->post('id');  // tidak perlu ini diubah
