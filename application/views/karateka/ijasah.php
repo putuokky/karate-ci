@@ -35,7 +35,7 @@
                 <input type="hidden" class="form-control" id="idbio" name="idbio" value="<?= $karate['biodata']; ?>">
                 <div class="form-group">
                   <label for="nama">Nama</label>
-                  <select class="form-control col-md-5" name="nama">
+                  <select class="form-control col-md-6" name="nama">
                     <?php foreach ($bio as $b) : ?>
                       <?php if ($karate['biodata'] == $b['id_biodata']) : ?>
                         <option value="<?= $b['id_biodata']; ?>" selected><?= $b['nama']; ?></option>
@@ -46,7 +46,7 @@
                 </div>
                 <div class="form-group">
                   <label for="sabuk">Sabuk</label>
-                  <select class="form-control col-md-4" name="sabuk">
+                  <select class="form-control col-md-3" name="sabuk">
                     <?php foreach ($sabuk as $s) : ?>
                       <?php if ($karate['sabuk'] == $s['id_sabuk']) : ?>
                         <option value="<?= $s['id_sabuk']; ?>" selected><?= $s['nama_sabuk']; ?></option>
@@ -77,11 +77,11 @@
                 </div>
                 <div class="form-group">
                   <label for="sabukbaru">Sabuk Baru</label>
-                  <select class="form-control col-md-4" name="sabukbaru">
+                  <select class="form-control col-md-3" name="sabukbaru">
                     <?php
                     foreach ($sabuk as $sb) : ?>
-                      <?php if ($karate['sabuk'] == $sb['id_sabuk']) : ?>
-                        <option value="<?= $sb['id_sabuk']; ?>" selected><?= $sb['nama_sabuk']; ?></option>
+                      <?php if ($karate['sabuk'] < $sb['id_sabuk']) : ?>
+                        <option value="<?= $sb['id_sabuk']; ?>"><?= $sb['nama_sabuk']; ?></option>
                       <?php endif ?>
                     <?php endforeach ?>
                   </select>

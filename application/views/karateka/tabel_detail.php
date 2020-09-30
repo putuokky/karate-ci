@@ -36,12 +36,7 @@
                 </div>
               <?php endif; ?>
               <h3>Nama : <b><?= $biodata['nama']; ?></b></h3>
-              <h3>Dojo : <b><?php
-                            $this->db->query('SELECT * FROM biodata
-              JOIN dojo ON dojo.id_dojo = biodata.dojo 
-              WHERE biodata.dojo = ', $biodata['dojo'])->result_array();
-
-                            ?></b></h3>
+              <h3>Dojo : <b><?= $dojo['nama_dojo']; ?></b></h3>
               <br>
               <a href="<?= base_url('log/karateka'); ?>" class="btn btn-md btn-info">Kembali</a>
             </div>

@@ -11,6 +11,16 @@ class Model_biodata extends CI_Model
         return $query->result_array();
     }
 
+    public function getBioDojoById($id)
+    {
+        $this->db->select('*');
+        $this->db->from('biodata');
+        $this->db->join('dojo', 'dojo.id_dojo = biodata.dojo');
+        $this->db->where('id_biodata', $id);
+        $query = $this->db->get();
+        return $query->row_array();
+    }
+
     public function getBiodataByStatus()
     {
         return $this->db->get_where('biodata', ['status_karateka' => 0])->result_array();
