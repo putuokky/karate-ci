@@ -51,6 +51,7 @@
   <!-- DataTables -->
   <script src="<?= base_url('assets'); ?>/plugins/datatables/jquery.dataTables.js"></script>
   <script src="<?= base_url('assets'); ?>/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+  <!-- Sweet Alert 2 -->
   <script src="<?= base_url('assets'); ?>/js/sweetalert2/sweetalert2.all.min.js"></script>
   <script src="<?= base_url('assets'); ?>/js/myscript.js"></script>
   <!-- page script -->
