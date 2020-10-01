@@ -29,11 +29,12 @@
             </div>
             <!-- /.card-header -->
             <div class="card-body">
+              <div class="flash-data" data-flashdata="<?= $this->session->flashdata('message'); ?>"></div>
               <?php if ($this->session->flashdata('message')) : ?>
-                <div class="alert alert-success alert-dismissible">
+                <!-- <div class="alert alert-success alert-dismissible">
                   <h5><i class="icon fas fa-check"></i> Alert!</h5>
                   <?= $subjudul; ?> Sukses <?= $this->session->flashdata('message'); ?>.
-                </div>
+                </div> -->
               <?php endif; ?>
               <a href="<?= base_url('log/karateka/tambah'); ?>" class="btn btn-md btn-primary">Tambah Data</a>
             </div>
@@ -70,7 +71,7 @@
                       <td><?= $no++; ?></td>
                       <td><a href="<?= base_url('log/karateka/detail/' . $bio['id_biodata']); ?>" class="btn btn-sm btn-info"><i class="fas fa-file-alt"></i> Detail</a>
                         <a href="<?= base_url('log/karateka/ubah/' . $bio['id_biodata']); ?>" title="Ubah" class="btn btn-sm btn-warning"><i class="fas fa-edit"></i> Ubah</a>
-                        <a href="" title="Hapus" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modal-default"><i class="fas fa-trash"></i> Hapus</a>
+                        <a href="<?= base_url('log/karateka/hapus/' . $bio['id_biodata']); ?>" class="btn btn-sm btn-danger tombol-hapus"><i class="fas fa-trash"></i> Hapus</a>
                       </td>
                       <td><?= $bio['nama']; ?></td>
                       <td><?= $bio['tempat_lahir']; ?></td>

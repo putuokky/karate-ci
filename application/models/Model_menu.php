@@ -30,4 +30,10 @@ class Model_menu extends CI_Model
         $this->db->where('id', $id);
         $this->db->update('user_menu', $data);
     }
+
+    public function hapusDataMenu($id)
+    {
+        $this->db->where('id', $id);
+        $this->db->delete('user_menu');
+    }
 }

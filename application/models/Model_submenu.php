@@ -26,4 +26,10 @@ class Model_submenu extends CI_Model
         $this->db->where('id_user_sub_menu ', $id);
         $this->db->update('user_sub_menu', $data);
     }
+
+    public function hapusDataSubMenu($id)
+    {
+        $this->db->where('id_user_sub_menu', $id);
+        $this->db->delete('user_sub_menu');
+    }
 }

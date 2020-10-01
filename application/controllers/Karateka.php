@@ -107,7 +107,7 @@ class Karateka extends CI_Controller
 			];
 
 			$this->m_biodata->tambahDataBiodata($data);
-			$this->session->set_flashdata('message', 'ditambah');
+			$this->session->set_flashdata('message', 'Ditambah');
 			redirect('log/karateka');
 		}
 	}
@@ -171,9 +171,16 @@ class Karateka extends CI_Controller
 			];
 
 			$this->m_biodata->ubahDataBiodata($data, $id);
-			$this->session->set_flashdata('message', 'diubah');
+			$this->session->set_flashdata('message', 'Diubah');
 			redirect('log/karateka');
 		}
+	}
+
+	public function hapus($id)
+	{
+		$this->m_karate->hapusDataKarate($id);
+		$this->session->set_flashdata('message', 'Dihapus');
+		redirect('log/karateka');
 	}
 
 	public function detail($id)

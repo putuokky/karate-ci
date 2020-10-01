@@ -60,4 +60,13 @@ class Model_karate extends CI_Model
         $this->db->where('id_karateka', $id);
         $this->db->update('karateka', $data);
     }
+
+    public function hapusDataKarate($id)
+    {
+        $this->db->where('id_biodata', $id);
+        $this->db->delete('biodata');
+
+        $this->db->where('biodata', $id);
+        $this->db->delete('karateka');
+    }
 }

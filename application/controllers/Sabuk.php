@@ -99,7 +99,7 @@ class Sabuk extends CI_Controller
 			];
 
 			$this->m_sabuk->tambahDataSabuk($data);
-			$this->session->set_flashdata('message', 'ditambah');
+			$this->session->set_flashdata('message', 'Ditambah');
 			redirect('log/sabuk');
 		}
 	}
@@ -159,8 +159,15 @@ class Sabuk extends CI_Controller
 			];
 
 			$this->m_sabuk->ubahDataSabuk($data, $id);
-			$this->session->set_flashdata('message', 'diubah');
+			$this->session->set_flashdata('message', 'Diubah');
 			redirect('log/sabuk');
 		}
+	}
+
+	public function hapus($id)
+	{
+		$this->m_sabuk->hapusDataSabuk($id);
+		$this->session->set_flashdata('message', 'Dihapus');
+		redirect('log/sabuk');
 	}
 }

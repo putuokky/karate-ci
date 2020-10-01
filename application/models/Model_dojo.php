@@ -23,4 +23,10 @@ class Model_dojo extends CI_Model
         $this->db->where('id_dojo', $id);
         $this->db->update('dojo', $data);
     }
+
+    public function hapusDataDojo($id)
+    {
+        $this->db->where('id_dojo', $id);
+        $this->db->delete('dojo');
+    }
 }

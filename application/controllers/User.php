@@ -112,7 +112,7 @@ class User extends CI_Controller
 			];
 
 			$this->m_user->tambahDataUsers($data);
-			$this->session->set_flashdata('message', 'ditambah');
+			$this->session->set_flashdata('message', 'Ditambah');
 			redirect('log/user');
 		}
 	}
@@ -174,8 +174,15 @@ class User extends CI_Controller
 			];
 
 			$this->m_user->ubahDataUsers($data, $id);
-			$this->session->set_flashdata('message', 'diubah');
+			$this->session->set_flashdata('message', 'Diubah');
 			redirect('log/user');
 		}
+	}
+
+	public function hapus($id)
+	{
+		$this->m_user->hapusDataUsers($id);
+		$this->session->set_flashdata('message', 'Dihapus');
+		redirect('log/user');
 	}
 }

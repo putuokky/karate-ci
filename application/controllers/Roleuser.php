@@ -91,7 +91,7 @@ class Roleuser extends CI_Controller
 			];
 
 			$this->m_roleuser->tambahDataRoleuser($data);
-			$this->session->set_flashdata('message', 'ditambah');
+			$this->session->set_flashdata('message', 'Ditambah');
 			redirect('log/roleuser');
 		}
 	}
@@ -142,9 +142,16 @@ class Roleuser extends CI_Controller
 			];
 
 			$this->m_roleuser->ubahDataRoleuser($data, $id);
-			$this->session->set_flashdata('message', 'diubah');
+			$this->session->set_flashdata('message', 'Diubah');
 			redirect('log/roleuser');
 		}
+	}
+
+	public function hapus($id)
+	{
+		$this->m_roleuser->hapusDataRoleuser($id);
+		$this->session->set_flashdata('message', 'Dihapus');
+		redirect('log/roleuser');
 	}
 
 	public function akses($id)

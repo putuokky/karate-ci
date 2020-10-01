@@ -30,4 +30,10 @@ class Model_roleuser extends CI_Model
         $this->db->where('id_role', $id);
         $this->db->update('user_role', $data);
     }
+
+    public function hapusDataRoleuser($id)
+    {
+        $this->db->where('id_role', $id);
+        $this->db->delete('user_role');
+    }
 }

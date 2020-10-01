@@ -29,11 +29,12 @@
             </div>
             <!-- /.card-header -->
             <div class="card-body">
+              <div class="flash-data" data-flashdata="<?= $this->session->flashdata('message'); ?>"></div>
               <?php if ($this->session->flashdata('message')) : ?>
-                <div class="alert alert-success alert-dismissible">
+                <!-- <div class="alert alert-success alert-dismissible">
                   <h5><i class="icon fas fa-check"></i> Alert!</h5>
                   <?= $subjudul; ?> Sukses <?= $this->session->flashdata('message'); ?>.
-                </div>
+                </div> -->
               <?php endif; ?>
               <a href="<?= base_url('log/sabuk/tambah'); ?>" class="btn btn-md btn-primary">Tambah Data</a>
             </div>
@@ -63,7 +64,7 @@
                     <tr>
                       <td><?= $no++; ?></td>
                       <td><a href="<?= base_url('log/sabuk/ubah/' . $sbk['id_sabuk']); ?>" class="btn btn-sm btn-warning"><i class="fas fa-edit"></i> Ubah</a>
-                        <a href="" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modal-default"><i class="fas fa-trash"></i> Hapus</a>
+                        <a href="<?= base_url('log/sabuk/hapus/' . $sbk['id_sabuk']); ?>" class="btn btn-sm btn-danger tombol-hapus"><i class="fas fa-trash"></i> Hapus</a>
                       </td>
                       <td style="background-color: <?= $sbk['warna_sabuk']; ?>; color: <?= $sbk['warna_tulisan']; ?>;"><?= $sbk['nama_sabuk']; ?></td>
                       <td><?= $sbk['tingkatan_sabuk']; ?></td>

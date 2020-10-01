@@ -90,7 +90,7 @@ class Dojo extends CI_Controller
 			];
 
 			$this->m_dojo->tambahDataDojo($data);
-			$this->session->set_flashdata('message', 'ditambah');
+			$this->session->set_flashdata('message', 'Ditambah');
 			redirect('log/dojo');
 		}
 	}
@@ -141,8 +141,15 @@ class Dojo extends CI_Controller
 			];
 
 			$this->m_dojo->ubahDataDojo($data, $id);
-			$this->session->set_flashdata('message', 'diubah');
+			$this->session->set_flashdata('message', 'Diubah');
 			redirect('log/dojo');
 		}
+	}
+
+	public function hapus($id)
+	{
+		$this->m_dojo->hapusDataDojo($id);
+		$this->session->set_flashdata('message', 'Dihapus');
+		redirect('log/dojo');
 	}
 }

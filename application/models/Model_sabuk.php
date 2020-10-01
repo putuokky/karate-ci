@@ -23,4 +23,10 @@ class Model_sabuk extends CI_Model
         $this->db->where('id_sabuk', $id);
         $this->db->update('sabuk', $data);
     }
+
+    public function hapusDataSabuk($id)
+    {
+        $this->db->where('id_sabuk', $id);
+        $this->db->delete('sabuk');
+    }
 }
