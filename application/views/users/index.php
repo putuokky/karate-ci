@@ -71,6 +71,7 @@
                       <td><?= $no++; ?></td>
                       <td><a href="<?= base_url('log/user/ubah/' . $us['id']); ?>" class="btn btn-sm btn-warning"><i class="fas fa-edit"></i> Ubah</a>
                         <a href="<?= base_url('log/user/hapus/' . $us['id']); ?>" class="btn btn-sm btn-danger tombol-hapus"><i class="fas fa-trash"></i> Hapus</a>
+                        <a href="<?= base_url('log/user/changepassw/' . $us['id']); ?>" class="btn btn-sm btn-info"><i class="fas fa-key"></i> Ganti Password</a>
                       </td>
                       <td><?= $us['name']; ?></td>
                       <td><?= $us['usrname']; ?></td>

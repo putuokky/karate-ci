@@ -179,6 +179,61 @@ class User extends CI_Controller
 		}
 	}
 
+	public function changepassw($id)
+	{
+		$data['judul'] = 'User';
+		$data['subjudul'] = 'Form Ganti Password User';
+
+		$data['user'] = $this->m_user->getUsersById($id);
+		if ($this->session->userdata('role_id') == 1) {
+			$data['role'] = $this->m_roleuser->getAllRoleusers();
+		} else {
+			$data['role'] = $this->m_roleuser->getAllRoleuser();
+		}
+
+		// untuk session login wajib isi
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
+		// end untuk session login wajib isi
+
+		// konten default pada template wajib isi
+		$data_config = $this->m_config->getConfig('brand');
+		$data['brand'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('main_header');
+		$data['main_header'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('version');
+		$data['version'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('nama_pengembang');
+		$data['nama_pengembang'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('link_pengembang');
+		$data['link_pengembang'] = $data_config->config_value;
+		// end konten default pada template wajib isi
+
+		$this->form_validation->set_rules('gantipassw', 'Ganti Password', 'required');
+
+		if ($this->form_validation->run() == false) {
+			$this->load->view('templates/header', $data);
+			$this->load->view('templates/topbar', $data);
+			$this->load->view('templates/sidebar', $data);
+			$this->load->view('users/form_gantipassw', $data);
+			$this->load->view('templates/footer', $data);
+		} else {
+			$passwrd = password_hash($this->input->post('gantipassw'), PASSWORD_DEFAULT);
+
+			$data = [
+				'password' => $passwrd
+			];
+
+			$this->m_user->ubahDataUsers($data, $id);
+			$this->session->set_flashdata('message', 'Password Diubah');
+			redirect('log/user');
+		}
+	}
+
 	public function hapus($id)
 	{
 		$this->m_user->hapusDataUsers($id);
