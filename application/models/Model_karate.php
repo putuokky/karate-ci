@@ -16,13 +16,13 @@ class Model_karate extends CI_Model
         return $query->result_array();
     }
 
-    public function getKarateByIdBio($id)
+    public function getKarateByIdBio($where, $id)
     {
         $this->db->select('*');
         $this->db->from('karateka');
         $this->db->join('biodata', 'biodata.id_biodata = karateka.biodata');
         $this->db->join('sabuk', 'sabuk.id_sabuk = karateka.sabuk');
-        $this->db->where('id_biodata', $id);
+        $this->db->where($where, $id);
         $query = $this->db->get();
         return $query->result_array();
     }
@@ -38,6 +38,17 @@ class Model_karate extends CI_Model
         $this->db->where('no_ijasah IS null');
         $query = $this->db->get();
         return $query->result_array();
+    }
+
+    public function getKarateByIdKareteka($where, $id)
+    {
+        $this->db->select('*');
+        $this->db->from('karateka');
+        $this->db->join('biodata', 'biodata.id_biodata = karateka.biodata');
+        $this->db->join('sabuk', 'sabuk.id_sabuk = karateka.sabuk');
+        $this->db->where($where, $id);
+        $query = $this->db->get();
+        return $query->row_array();
     }
 
     public function getKarateById($id)
@@ -61,12 +72,9 @@ class Model_karate extends CI_Model
         $this->db->update('karateka', $data);
     }
 
-    public function hapusDataKarate($id)
+    public function hapusDataKarateka($id)
     {
-        $this->db->where('id_biodata', $id);
-        $this->db->delete('biodata');
-
-        $this->db->where('biodata', $id);
+        $this->db->where('id_karateka', $id);
         $this->db->delete('karateka');
     }
 }

@@ -42,9 +42,12 @@ class Model_biodata extends CI_Model
         $this->db->update('biodata', $data);
     }
 
-    public function ubahDataBioForStatus($dt, $id)
+    public function hapusDataBiodata($id)
     {
         $this->db->where('id_biodata', $id);
-        $this->db->update('biodata', $dt);
+        $this->db->delete('biodata');
+
+        $this->db->where('biodata', $id);
+        $this->db->delete('karateka');
     }
 }

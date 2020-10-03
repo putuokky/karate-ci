@@ -178,7 +178,7 @@ class Karateka extends CI_Controller
 
 	public function hapus($id)
 	{
-		$this->m_karate->hapusDataKarate($id);
+		$this->m_biodata->hapusDataBiodata($id);
 		$this->session->set_flashdata('message', 'Dihapus');
 		redirect('log/karateka');
 	}
@@ -211,15 +211,77 @@ class Karateka extends CI_Controller
 		// end konten default pada template wajib isi
 
 		$data['biodata'] = $this->m_biodata->getBiodataById($id);
-		$data['karate'] = $this->m_karate->getKarateByIdBio($id);
+		$data['karate'] = $this->m_karate->getKarateByIdBio('biodata.id_biodata', $id);
 		$data['dojo'] = $this->m_biodata->getBioDojoById($id);
-		$data['sabuk'] = $this->m_karate->getKarateByIdBio($id);
+		$data['sabuk'] = $this->m_karate->getKarateByIdBio('biodata.id_biodata', $id);
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/topbar', $data);
 		$this->load->view('templates/sidebar', $data);
 		$this->load->view('karate/tabel_detail', $data);
 		$this->load->view('templates/footer', $data);
+	}
+
+	public function ubahdetail($id)
+	{
+		$data['judul'] = 'Karateka';
+		$data['subjudul'] = 'Form Ubah Detail Karateka';
+
+		// untuk session login wajib isi
+		$user = $this->session->userdata('usrname');
+		$data['userlogin'] = $this->m_user->getUserByUser($user);
+		// end untuk session login wajib isi
+
+		// konten default pada template wajib isi
+		$data_config = $this->m_config->getConfig('brand');
+		$data['brand'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('main_header');
+		$data['main_header'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('version');
+		$data['version'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('nama_pengembang');
+		$data['nama_pengembang'] = $data_config->config_value;
+
+		$data_config = $this->m_config->getConfig('link_pengembang');
+		$data['link_pengembang'] = $data_config->config_value;
+		// end konten default pada template wajib isi
+
+		$data['karate'] = $this->m_karate->getKarateByIdKareteka('karateka.id_karateka', $id);
+		$data['sabuk'] = $this->m_sabuk->getAllSabuk();
+
+		$this->form_validation->set_rules('sabuk', 'Sabuk', 'required');
+
+		if ($this->form_validation->run() == false) {
+			$this->load->view('templates/header', $data);
+			$this->load->view('templates/topbar', $data);
+			$this->load->view('templates/sidebar', $data);
+			$this->load->view('karate/formubahdetail', $data);
+			$this->load->view('templates/footer', $data);
+		} else {
+			$id = $this->input->post('id');  // tidak perlu ini diubah
+			$id_bio = $this->input->post('id_bio');
+			$sabuk = $this->input->post('sabuk');
+
+			$data = [
+				'sabuk' => $sabuk
+			];
+
+			$this->m_karate->ubahDataKarate($data, $id);
+			$this->session->set_flashdata('message', 'Diubah');
+			redirect('log/karateka/detail/' . $id_bio);
+		}
+	}
+
+	public function hapusdetail($id)
+	{
+		$data['karate'] = $this->m_karate->getKarateByIdKareteka('karateka.id_karateka', $id);
+
+		// $this->m_karate->hapusDataKarateka($id);
+		// $this->session->set_flashdata('message', 'Dihapus');
+		// redirect('log/karateka/detail/' . $id);
 	}
 
 	public function tambahsabuk($id)
@@ -251,7 +313,6 @@ class Karateka extends CI_Controller
 
 		$data['nama'] = $this->m_biodata->getAllBiodata();
 
-
 		$data['biodata'] = $this->m_biodata->getBiodataById($id);
 		$data['sabuk'] = $this->m_sabuk->getAllSabuk();
 
@@ -265,7 +326,7 @@ class Karateka extends CI_Controller
 			$this->load->view('karate/formtambahsabuk', $data);
 			$this->load->view('templates/footer', $data);
 		} else {
-			$id = $this->input->post('nama');
+			$id = $this->input->post('id_biodata');
 			$nama = $this->input->post('nama');
 			$sabuk = $this->input->post('sabuk');
 
@@ -275,14 +336,9 @@ class Karateka extends CI_Controller
 				'is_active' => 1
 			];
 
-			$dt = [
-				'status_karateka' => 1
-			];
-
 			$this->m_karate->tambahDataKarate($data);
-			$this->m_biodata->ubahDataBioForStatus($dt, $id);
-			$this->session->set_flashdata('message', 'ditambah');
-			redirect('log/karateka');
+			$this->session->set_flashdata('message', 'Ditambah');
+			redirect('log/karateka/detail/' . $id);
 		}
 	}
 

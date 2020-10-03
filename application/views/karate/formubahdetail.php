@@ -31,16 +31,11 @@
             <!-- form start -->
             <form role="form" method="POST" action="">
               <div class="card-body">
-                <input type="hidden" class="form-control" id="id_biodata" name="id_biodata" value="<?= $biodata['id_biodata']; ?>">
+                <input type="hidden" class="form-control" id="id" name="id" value="<?= $karate['id_karateka']; ?>">
+                <input type="hidden" class="form-control" id="id_bio" name="id_bio" value="<?= $karate['biodata']; ?>">
                 <div class="form-group">
                   <label for="nama">Nama</label>
-                  <select class="form-control col-md-6" name="nama">
-                    <?php foreach ($nama as $n) : ?>
-                      <?php if ($biodata['id_biodata'] == $n['id_biodata']) : ?>
-                        <option value="<?= $n['id_biodata']; ?>" selected><?= $n['nama']; ?></option>
-                      <?php endif ?>
-                    <?php endforeach ?>
-                  </select>
+                  <input type="text" class="form-control col-md-8" id="nama" name="nama" placeholder="Enter Nama" value="<?= $karate['nama']; ?>" disabled>
                   <small class="form-text text-danger"><?= form_error('nama'); ?></small>
                 </div>
                 <div class="form-group">
@@ -48,7 +43,11 @@
                   <select class="form-control col-md-4 select2bs4" name="sabuk">
                     <option value="0">-</option>
                     <?php foreach ($sabuk as $s) : ?>
-                      <option value="<?= $s['id_sabuk']; ?>"><?= $s['nama_sabuk']; ?></option>
+                      <?php if ($karate['sabuk'] == $s['id_sabuk']) : ?>
+                        <option value="<?= $s['id_sabuk']; ?>" selected><?= $s['nama_sabuk']; ?></option>
+                      <?php else : ?>
+                        <option value="<?= $s['id_sabuk']; ?>"><?= $s['nama_sabuk']; ?></option>
+                      <?php endif ?>
                     <?php endforeach ?>
                   </select>
                   <small class="form-text text-danger"><?= form_error('sabuk'); ?></small>
@@ -58,7 +57,7 @@
 
               <div class="card-footer">
                 <button type="submit" class="btn btn-primary">Simpan</button>
-                <a href="<?= base_url('log/karateka/detail/' . $biodata['id_biodata']); ?>" class="btn btn-default">Cancel</a>
+                <a href="<?= base_url('log/karateka/detail/' . $karate['biodata']); ?>" class="btn btn-default">Cancel</a>
               </div>
             </form>
           </div>
