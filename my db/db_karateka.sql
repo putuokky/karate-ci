@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 30 Sep 2020 pada 15.07
+-- Waktu pembuatan: 16 Okt 2020 pada 06.19
 -- Versi server: 10.4.14-MariaDB
 -- Versi PHP: 7.4.10
 
@@ -493,20 +493,7 @@ INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis
 (454, 'Made Agustiya Andre Artawan', 'Bumbungan', '2009-02-08', 1, 20),
 (455, 'I Gede Aya Surya Wibawa', 'Denpasar', '2009-05-01', 1, 20),
 (456, 'I Kadek Arya Chandra Wibawa', 'Denpasar', '2010-01-03', 1, 20),
-(457, 'Kadek Dhiyamdha Arthana', 'Denpasar', '2003-03-06', 1, 3),
-(458, 'Krishna Bayu Wicaksana', 'Denpasar', '2006-08-08', 1, 3),
-(459, 'Ni Putu Cinta Belvina Anindita', 'Denpasar', '2011-12-06', 2, 3),
-(460, 'Ni Kadek Dwi Maharani', 'Singaraja', '2006-02-09', 2, 3),
-(461, 'Fitho Imanuel Fernandez', 'Denpasar', '2011-09-04', 1, 3),
-(462, 'Kadek Ngurah Mahisa Sanga Mandala', 'Denpasar', '2008-09-07', 1, 3),
-(463, 'Komang Ngurah Maheswara Aditya Putra', 'Denpasar', '2010-12-09', 1, 3),
-(464, 'Kadek Elita Aulia Januara', 'Denpasar', '2008-07-05', 2, 3),
-(465, 'I Putu Kembar Hendra Dwipayana', 'Denpasar', '2011-11-08', 1, 3),
-(466, 'I Tude Kembar Hendrik Dwipayana', 'Denpasar', '2011-11-08', 1, 3),
-(467, 'Gede Restu Satya Mandala', 'Denpasar', '2010-01-03', 1, 3),
-(468, 'Pramudya Adi Mahendra', 'Lumajang ', '2010-12-01', 1, 3),
 (469, 'I Gede Gunamertha Yasa', 'Denpasar', '2008-11-10', 1, 3),
-(470, 'Ni Made Aishwarya Rai Karang', 'Denpasar', '2007-01-03', 2, 3),
 (471, 'I Putu Dharma Narendra Putra', 'Denpasar', '2010-05-05', 1, 3),
 (472, 'Putu Qyara Krisnanda Ganesti', 'Singaraja', '2009-05-06', 2, 3),
 (473, 'Gusti Ayu Natania Putri', 'Denpasar', '2011-09-06', 2, 3),
@@ -579,7 +566,6 @@ INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis
 (540, 'I Gede Agus Suputra', 'Saren', '2008-03-03', 1, 17),
 (541, 'Ni Luh Yulia Anggreni Putri Loka', 'Batukandik', '2007-10-07', 2, 17),
 (542, 'Putu Riko Aditya Nugraha', 'Denpasar', '2008-09-01', 1, 17),
-(543, 'Made Agustiya Andre Artawan', 'Bumbungan', '2009-02-08', 1, 20),
 (544, 'Jasmin Aurura Sanjaya', 'Banyuwangi', '2011-12-06', 2, 14),
 (545, 'Daviano Ezekiel Sango', 'Palu', '2010-05-09', 1, 14),
 (546, 'I Gede Rangga Darrel Dika Putra', 'Denpasar', '2011-10-11', 1, 14),
@@ -796,8 +782,7 @@ INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis
 (757, 'I Gede Eka Prasetya Wiguna', 'Denpasar', '2009-09-12', 1, 17),
 (758, 'Ni Luh Putu Setia Diwi', 'Bangli', '2009-08-09', 2, 9),
 (759, 'Kadek Rahayu Devi', 'Denpasar', '2011-03-06', 2, 9),
-(760, 'Putu Octa Danadyaksa', 'Denpasar', '2008-09-10', 1, 10);
-INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis_kelamin`, `dojo`) VALUES
+(760, 'Putu Octa Danadyaksa', 'Denpasar', '2008-09-10', 1, 10),
 (761, 'I Gede Indra Saptadi', 'Denpasar', '2009-01-06', 1, 10),
 (762, 'Ni Kadek Sanisa Putri', 'Denpasar', '2009-11-04', 2, 11),
 (763, 'Kadek Evo Adnyana', 'Singaraja', '2010-10-01', 1, 15),
@@ -812,7 +797,8 @@ INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis
 (772, 'Kadek Dea Nanda Puspita Andini', 'Denpasar', '2000-01-06', 2, 4),
 (773, 'I Putu Darsa Raditya Utama', 'Bangli', '2009-11-02', 1, 19),
 (774, 'I Komang Abi Kanaya', 'Bangli', '2013-11-04', 1, 19),
-(775, 'I Putu Nayaka Wirya Gunanda', 'Bangli', '2010-02-03', 1, 19),
+(775, 'I Putu Nayaka Wirya Gunanda', 'Bangli', '2010-02-03', 1, 19);
+INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis_kelamin`, `dojo`) VALUES
 (776, 'I Gede Budi Cipta Saputra', 'Batur Tengah', '2010-11-08', 1, 19),
 (777, 'Kadek Adi Wirawan', 'Bangli', '2008-06-03', 1, 19),
 (778, 'I Gede Andika Pratama Marusuta', 'Bangli', '2011-06-09', 1, 19),
@@ -833,21 +819,7 @@ INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis
 (971, 'Gde Ari Suastika', 'Denpasar', '2007-01-15', 1, 20),
 (972, 'Ni Pande Made Maheswari', 'Denpasar', '2007-04-28', 2, 20),
 (973, 'Ni Ketut Agustini', 'Sambirenteng', '2008-08-17', 2, 20),
-(974, 'I Kadek Dwi Radha Saputra', 'Karangasem', '2008-04-25', 1, 3),
-(975, 'I Putu Puja Aditya Setiawan', 'Kalabahi', '2002-11-24', 1, 3),
-(976, 'I Putu Maharjaya Tirta', 'Jakarta', '2004-06-25', 1, 3),
-(977, 'I Made Genta Prabhawa', 'Denpasar', '2009-04-26', 1, 3),
-(978, 'Putu Tiara Aurellia Januara', 'Badung', '2007-04-17', 2, 3),
-(979, 'I Made Panji Brian Nugraha', 'Denpasar', '2005-01-31', 1, 3),
-(980, 'I Kadek Dwi Giantara Tirta', 'Jakarta', '2010-05-22', 1, 3),
-(981, 'I Gede Ganendra Dharma Dhyaksa', 'Denpasar', '2011-07-16', 1, 3),
-(982, 'Ni Putu Trisna Ayu Adisty', 'Singaraja', '2009-09-23', 2, 3),
-(983, 'I Ketut Asep Baskara', 'Denpasar', '2010-12-19', 1, 3),
 (984, 'Tegar Dharma Permata Utama', 'Denpasar', '2008-06-17', 1, 3),
-(985, 'Putu Kartika Putri', 'Denpasar', '0000-00-00', 2, 3),
-(986, 'Ni Ketut Purnamaningsih', 'Denpasar', '2008-01-22', 2, 3),
-(987, 'Nabila Putri Larasati', 'Denpasar', '2007-11-19', 2, 3),
-(988, 'Komang Savitri Vidula Athalia', 'Denpasar', '2009-04-16', 2, 3),
 (989, 'Putu Ayu Ida Majesti Pratiwi', 'Denpasar', '2004-11-24', 2, 3),
 (990, 'Ni Kadek Ayu Kirana Kuaca Santhika', 'Denpasar', '2011-06-30', 2, 3),
 (991, 'Ni Komang Shiva Nawaswari Gunarja', 'Denpasar', '2006-04-20', 2, 3),
@@ -1115,7 +1087,6 @@ INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis
 (1253, 'I Gede Wahyu Eka Wardana', 'Denpasar', '2009-12-18', 1, 21),
 (1254, 'I Nyoman Sukerta', 'Denpasar', '2008-07-27', 1, 21),
 (1255, 'Zulvi Bintang Cahyu', 'Denpasar', '2010-06-20', 2, 21),
-(1256, 'Ni Made Pande Maheswari', 'Denpasar', '2007-04-28', 2, 21),
 (1257, 'Fathir Ibrahim', 'Denpasar', '2009-02-23', 1, 21),
 (1258, 'Putu Damian Liki Mahaputra', 'Denpasar', '2011-02-19', 1, 21),
 (1259, 'Kevina Septembery Adira Claresta', 'Denpasar', '2010-09-18', 2, 21),
@@ -1266,8 +1237,6 @@ INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis
 (1404, 'I Kadek Justin Raijaya Suputra', 'Denpasar', '2011-06-26', 1, 2),
 (1405, 'I Nyoman Suryawan', 'Buleleng', '2003-12-20', 1, 2),
 (1406, 'I Kadek Yoga Amrita', 'Denpasar', '2004-04-15', 1, 2),
-(1407, 'I Ketut Asep Baskara', 'Denpasar', '2010-12-19', 1, 3),
-(1408, 'Tegar Dharma Permata Utama', 'Denpasar', '2008-06-17', 1, 3),
 (1409, 'Kadek Tantri Mahardika Putri', 'Denpasar', '2008-07-16', 2, 17),
 (1410, 'I Gede Hendra Sastrawan', 'Denpasar', '2010-03-19', 1, 17),
 (1411, 'Ni Putu Pradnya Paramita Suari', 'Denpasar', '2008-07-15', 2, 17),
