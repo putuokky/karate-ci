@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 02 Nov 2020 pada 04.06
+-- Waktu pembuatan: 02 Nov 2020 pada 05.19
 -- Versi server: 10.4.14-MariaDB
 -- Versi PHP: 7.4.10
 
@@ -515,28 +515,13 @@ INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis
 (497, 'I Komang Adi Wiranata', 'Denpasar', '2009-11-05', 1, 4),
 (498, 'Ni Putu Eda Tisya Ananta Putri', 'Yeha', '2010-09-03', 2, 4),
 (499, 'Made Gede Ari Yudangga', 'Denpasar', '2011-07-08', 1, 4),
-(501, 'Putu Vincent Febriana Dharma Artha', 'Denpasar', '2010-01-02', 1, 8),
-(502, 'Kadek Satya Ananta', 'Bangli', '2012-03-05', 1, 8),
-(503, 'I Gd. Dyandra Kusuma Pradipta', 'Denpasar', '2007-05-10', 1, 8),
 (504, 'I Gusti Ketut Krisna Ferly Putra', 'Denpasar', '2010-03-06', 1, 8),
-(505, 'Pt. Agni Sumarjaya Teja', 'Denpasar', '2012-01-06', 1, 8),
-(506, 'Kadek Sendy Ratna Suwandari', 'Bungkulan', '2010-07-09', 2, 7),
-(507, 'I Made Egar Gargita Dwipa', 'Denpasar', '2008-09-09', 1, 7),
-(508, 'I Kadek Rangga Semarajaya Pinatih', 'Denpasar', '2008-09-05', 1, 7),
-(509, 'Ni Kadek Sri Via Diantika', 'Denpasar', '2007-03-11', 2, 7),
-(510, 'Ida Ayu Karina Novita Damayanti', 'Denpasar', '2007-04-11', 2, 7),
-(511, 'Ni Luh Putu Ariantining', 'Kayuputih', '2007-12-11', 2, 7),
-(512, 'Ni Kadek Classica Intaniar Sujana', 'Denpasar', '2008-02-08', 2, 7),
 (513, 'Gede Windu Artha Dharmawan', 'Denpasar', '2011-05-10', 1, 7),
 (514, 'I Gusti Ayu Agung Melanti Arumi Saritha', 'Denpasar', '2009-11-05', 2, 7),
 (515, 'I Gusti Ayu Agung Nilani Nismara Saritha', 'Denpasar', '2011-11-06', 2, 7),
 (516, 'I Putu Agus Andhika Putra Yasa', 'Pelem Gede', '2010-06-07', 1, 7),
-(517, 'A.A. Arya Wiguna', 'Denpasar', '2005-03-10', 1, 6),
 (518, 'Hafiez Akbar', 'Denpasar', '2010-12-07', 0, 6),
 (519, 'Hafiez Akbar', 'Denpasar', '2010-12-06', 1, 6),
-(520, 'Anak Agung Putu Gede Murti Mayura', 'Denpasar', '2009-06-10', 1, 6),
-(521, 'Wirya Aditya Muazham', 'Banyuwangi', '2011-11-04', 1, 6),
-(522, 'I Ketut Adi Dharma Wicaksana', 'Denpasar', '2006-11-05', 1, 6),
 (523, 'Ni Kadek Kayla Sridani', 'Denpasar', '2012-03-06', 2, 6),
 (524, 'Ni Putu Esa Pratiwi', 'Jakarta', '2007-01-05', 2, 6),
 (525, 'I Gusti Ayu Made Karina Ganitri Dewi', 'Jakarta', '2007-07-07', 2, 5),
@@ -797,8 +782,7 @@ INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis
 (959, 'I Made Adi Yoga Permana Putra', 'Denpasar', '2010-10-17', 1, 22),
 (960, 'Ngurah Ayudya Astradevaki', 'Pacung', '2011-04-15', 2, 22),
 (961, 'I Kadek Bintang Hartawan', 'Denpasar', '2010-11-25', 1, 22),
-(962, 'Komang Tristan Lionel Pratama', 'Denpasar', '2009-08-21', 1, 22);
-INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis_kelamin`, `dojo`) VALUES
+(962, 'Komang Tristan Lionel Pratama', 'Denpasar', '2009-08-21', 1, 22),
 (963, 'I Ketut Hendra Santika', 'Denpasar', '2009-10-09', 1, 22),
 (964, 'Adek Vyakarana Sanjiwani', 'Jakarta', '2010-06-17', 2, 22),
 (965, 'I Kadek Andika Dwipayana', 'Denpasar', '2009-10-27', 1, 22),
@@ -813,7 +797,8 @@ INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis
 (984, 'Tegar Dharma Permata Utama', 'Denpasar', '2008-06-17', 1, 3),
 (989, 'Putu Ayu Ida Majesti Pratiwi', 'Denpasar', '2004-11-24', 2, 3),
 (990, 'Ni Kadek Ayu Kirana Kuaca Santhika', 'Denpasar', '2011-06-30', 2, 3),
-(991, 'Ni Komang Shiva Nawaswari Gunarja', 'Denpasar', '2006-04-20', 2, 3),
+(991, 'Ni Komang Shiva Nawaswari Gunarja', 'Denpasar', '2006-04-20', 2, 3);
+INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis_kelamin`, `dojo`) VALUES
 (993, 'Ketut Indra Seputra Sutanegara', 'Denpasar', '2009-11-14', 1, 3),
 (994, 'AA Gede Agung Astika Putra', 'Denpasar', '2008-06-26', 1, 3),
 (995, 'AA Valentina Putri', 'Denpasar', '2008-02-18', 2, 3),
@@ -824,31 +809,9 @@ INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis
 (1008, 'Jennifer Christina Burggraaff', 'Denpasar', '2008-09-27', 2, 4),
 (1009, 'Ni Kadek Ayu Chintya Laksmi Dewi', 'Denpasar', '2009-08-18', 2, 4),
 (1010, 'Reisya Junia Dewi', 'Denpasar', '2011-06-19', 1, 4),
-(1012, 'Ni Komang Dina Kartini', 'Denpasar', '2005-04-21', 2, 8),
-(1013, 'I Gst. Pt. Mayun Dhinata S.', 'Denpasar', '2006-09-20', 1, 8),
-(1014, 'Christian Setiawan', 'Denpasar', '2006-01-24', 1, 8),
 (1015, 'I Ketut Kusuma Dinata', 'Denpasar', '2010-07-30', 1, 8),
-(1016, 'I Gst. Ayu Mirah Dhinata S.', 'Denpasar', '2007-11-29', 2, 8),
-(1017, 'A.A. Ayu Ulantari', 'Denpasar', '2004-01-27', 2, 8),
-(1018, 'Ni Pt. Eka Suksmi Putri', 'Buleleng', '2004-04-29', 2, 8),
 (1019, 'R. Aldi Satrio Indra Nugraha', 'Denpasar', '2006-05-29', 1, 8),
 (1020, 'Luh Putu Dinda Savitri', '', '0000-00-00', 2, 0),
-(1021, 'I Made Andhika Krisna Putra', 'Denpasar', '2008-05-18', 1, 7),
-(1022, 'Gusti Ayu Kadek Mirah Widiadnyani', 'Yeh Sumbul', '2008-08-13', 2, 7),
-(1023, 'A.A. Ngurah Bagus Jaya Artha', 'Denpasar', '2008-09-26', 1, 7),
-(1024, 'Gusti Ayu Putu Widya Pratiwi', 'Yeh Sumbul', '2005-02-16', 2, 7),
-(1025, 'Komang Sutrisna Wijaya Kusuma', 'Denpasar', '2009-04-15', 1, 7),
-(1026, 'Komang Ayudia Winanda Nesha', 'Gianyar', '2008-05-20', 2, 7),
-(1027, 'I Gusti Agung Ayu Pradnya Paramita', 'Denpasar', '2008-01-17', 2, 7),
-(1028, 'Jecelyn Aulia Putri Djunaedi', 'Denpasar', '2007-11-13', 2, 7),
-(1029, 'Made Yesika Armayanti', 'Denpasar', '2007-09-18', 2, 7),
-(1030, 'I Made Lanca Pageh Wiranata', 'Denpasar', '2007-09-29', 1, 7),
-(1031, 'Putu Larashita Nayaswari', 'Denpasar', '2010-03-24', 2, 7),
-(1032, 'Made Winanta Daneswara', 'Denpasar', '2010-09-30', 1, 7),
-(1033, 'Fransiskus Hendra Setiawan', 'Denpasar', '2008-07-16', 1, 7),
-(1034, 'Kadek Windu Mas Arya Artanta', 'Denpasar', '2009-12-26', 1, 7),
-(1035, 'Nyoman Anugrah Mas Arya Widiantara', 'Denpasar', '2011-08-28', 1, 7),
-(1036, 'Putu Sita Mas Aryanthi', 'Negara', '2007-11-12', 2, 7),
 (1037, 'I Gusti Ngurah Rama Satwika Pramana', 'Denpasar', '2010-05-19', 1, 7),
 (1038, 'I Gusti Nguah Agung Bagus Mahatma Naryama', 'Denpasar', '2013-03-21', 1, 7),
 (1039, 'I Putu Rangga Acarya Wahana', 'Denpasar', '2010-07-30', 1, 7),
@@ -856,16 +819,7 @@ INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis
 (1041, 'Si Gede Pranaya Aniasta', 'Denpasar', '2009-08-31', 1, 7),
 (1042, 'Nyoman Arya Adnyana', 'Pangkungparuk', '2011-04-22', 1, 7),
 (1043, 'Made Ary Adnyani', 'Pangkungparuk', '2008-05-14', 2, 7),
-(1044, 'Putu Oktarina Manik Agung', 'Denpasar', '2006-10-24', 2, 6),
-(1045, 'Muhammad Rizqy Maulana', 'Denpasar', '2009-03-13', 1, 6),
-(1046, 'I Gede Winasa Edy Purnama', 'Denpasar', '2007-05-31', 1, 6),
-(1047, 'Defa Septo Ramadhani', 'Blitar', '2009-09-17', 1, 6),
-(1048, 'Gabriel Xavi Hernandes Sroyer', 'Manokwari', '2011-04-19', 1, 6),
-(1049, 'Ibnu Herizon Alkhori', 'Banyuwangi', '2011-07-19', 1, 6),
-(1050, 'Anak Agung Made Prama Yoga', 'Denpasar', '2010-04-22', 1, 6),
-(1051, 'Arya Bakti Darma Ali', 'Banyuwangi', '2009-10-14', 1, 6),
 (1052, 'Gee Casya Bantaika', 'Kupang', '2008-02-17', 2, 6),
-(1053, 'Ni Kadek Dwi Maharani', 'Denpasar', '2008-08-31', 2, 6),
 (1054, 'Gemma Wahyu S.H', '', '0000-00-00', 1, 0),
 (1055, 'Kharisma Wijaya', '', '0000-00-00', 1, 0),
 (1056, 'Ratu January Marrang', 'Denpasar', '2007-01-14', 2, 5),
@@ -1197,8 +1151,6 @@ INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis
 (1383, 'Gede Wisnu Pratama', 'Tabanan', '2011-04-15', 1, 2),
 (1384, 'I Kadek Bayu Septiawan', 'Karangasem', '2009-09-24', 1, 2),
 (1385, 'I Wayan Adi Saputra', 'Badung', '2003-11-20', 1, 2),
-(1386, 'Muhammad Rizqy Maulana', 'Denpasar', '2009-03-13', 1, 6),
-(1387, 'I Gede Winasa Edy Purnama', 'Denpasar', '2007-05-31', 1, 6),
 (1388, 'I Kadek Sasta Pasetya', 'Denpasa', '2008-05-20', 1, 17),
 (1389, 'Ni Putu Anggi Novyandani', 'Denpasar', '2008-11-18', 2, 9),
 (1390, 'A.A. Ayu Widya Paramita', 'Denpasar', '2009-01-20', 2, 9),
@@ -1271,7 +1223,8 @@ INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis
 (1459, 'I Made Airlangga Wira Pratama', 'Gianyar', '2012-10-14', 1, 19),
 (1460, 'I Made Airlangga Karisma', 'Batur Tengah', '2012-12-17', 1, 19),
 (1461, 'I Made Redana Putra', 'Bangli', '2013-04-14', 1, 19),
-(1462, 'Ketut Widiatmika Permana Putra', 'Batur Selatan', '2012-05-28', 1, 19);
+(1462, 'Ketut Widiatmika Permana Putra', 'Batur Selatan', '2012-05-28', 1, 19),
+(1463, 'Ni Kadek Dwi Maharani', 'Denpasar', '2008-07-08', 2, 6);
 
 -- --------------------------------------------------------
 
@@ -2759,7 +2712,7 @@ ALTER TABLE `user_sub_menu`
 -- AUTO_INCREMENT untuk tabel `biodata`
 --
 ALTER TABLE `biodata`
-  MODIFY `id_biodata` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1463;
+  MODIFY `id_biodata` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1464;
 
 --
 -- AUTO_INCREMENT untuk tabel `config`
