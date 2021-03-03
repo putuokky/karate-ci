@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 18 Feb 2021 pada 08.44
+-- Waktu pembuatan: 03 Mar 2021 pada 09.48
 -- Versi server: 10.4.14-MariaDB
 -- Versi PHP: 7.2.34
 
@@ -814,7 +814,6 @@ INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis
 (1055, 'Kharisma Wijaya', '', '0000-00-00', 1, 5),
 (1061, 'Ayu Anastasya', 'Parigi', '2008-07-23', 2, 5),
 (1062, 'Syiffia Rahma Khomairah', 'Denpasar', '2008-08-13', 2, 5),
-(1084, 'Dinda Aqilah Triana', 'Denpasar', '2009-12-27', 2, 5),
 (1085, 'I Gde Dharmendra Gandhi', 'Denpasar', '2003-09-24', 1, 5),
 (1086, 'Komang Riski Ananta Pratama', 'Denpasar', '2008-03-16', 1, 17),
 (1087, 'Jeriko Pratama Leoanak', 'Denpasar', '2010-08-31', 1, 14),
@@ -1383,7 +1382,7 @@ INSERT INTO `karateka` (`id_karateka`, `biodata`, `sabuk`, `tgl_ujian`, `no_ijas
 (107, 62, 2, '2019-01-27', '115/P.PROV-KKI/III/2019', '2019-03-30', '65.00', 0),
 (108, 62, 3, '2019-07-14', '1217/P.PROV-KKI/VIII/2019', '2019-08-30', '69.40', 0),
 (109, 63, 2, '2019-01-27', '116/P.PROV-KKI/III/2019', '2019-03-30', '67.50', 0),
-(110, 63, 3, NULL, '', NULL, '0.00', 1),
+(110, 63, 3, '2019-07-14', '1218/P.PROV-KKI/VIII/2019', '2019-08-30', '70.10', 0),
 (111, 64, 2, '2019-01-27', '117/P.PROV-KKI/III/2019', '2019-03-30', '66.70', 0),
 (112, 64, 3, NULL, '', NULL, '0.00', 1),
 (113, 65, 2, '2019-01-27', '118/P.PROV-KKI/III/2019', '2019-03-30', '65.00', 0),
@@ -2481,7 +2480,22 @@ INSERT INTO `karateka` (`id_karateka`, `biodata`, `sabuk`, `tgl_ujian`, `no_ijas
 (1207, 60, 4, '2019-12-29', '245/P.PROV-KKI/II/2020', '2020-02-28', '73.90', 0),
 (1208, 60, 5, NULL, NULL, NULL, NULL, 1),
 (1209, 61, 4, NULL, NULL, NULL, NULL, 1),
-(1210, 62, 4, NULL, NULL, NULL, NULL, 1);
+(1210, 62, 4, NULL, NULL, NULL, NULL, 1),
+(1211, 63, 4, '2019-12-29', '246/P.PROV-KKI/II/2020', '2020-02-28', '75.10', 0),
+(1212, 63, 5, NULL, NULL, NULL, NULL, 1),
+(1213, 1085, 2, '2019-07-14', '1184/P.PROV-KKI/VIII/2019', '2019-08-30', '68.90', 0),
+(1214, 1085, 3, '2019-12-29', '212/P.PROV-KKI/II/2020', '2020-02-28', '65.80', 0),
+(1215, 1085, 4, NULL, NULL, NULL, NULL, 1),
+(1216, 537, 2, '2019-07-14', '1185/P.PROV-KKI/VIII/2019', '2019-08-30', '68.40', 0),
+(1217, 537, 3, '2019-12-29', '213/P.PROV-KKI/II/2020', '2020-02-28', '65.80', 0),
+(1218, 537, 4, NULL, NULL, NULL, NULL, 1),
+(1219, 538, 2, '2019-12-29', '151/P.PROV-KKI/II/2020', '2020-02-28', '63.20', 0),
+(1220, 538, 3, NULL, NULL, NULL, NULL, 1),
+(1221, 539, 2, '2019-07-14', '1180/P.PROV-KKI/VIII/2019', '2019-08-30', '67.00', 0),
+(1222, 539, 3, '2019-12-29', '210/P.PROV-KKI/II/2020', '2020-02-28', '68.50', 0),
+(1223, 539, 4, NULL, NULL, NULL, NULL, 1),
+(1224, 1086, 2, '2019-07-14', '1181/P.PROV-KKI/VIII/2019', '2019-08-30', '67.90', 0),
+(1225, 1086, 3, NULL, NULL, NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -2733,7 +2747,7 @@ ALTER TABLE `dojo`
 -- AUTO_INCREMENT untuk tabel `karateka`
 --
 ALTER TABLE `karateka`
-  MODIFY `id_karateka` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1211;
+  MODIFY `id_karateka` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1226;
 
 --
 -- AUTO_INCREMENT untuk tabel `sabuk`
