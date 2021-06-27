@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 03 Mar 2021 pada 09.48
+-- Waktu pembuatan: 27 Jun 2021 pada 06.40
 -- Versi server: 10.4.14-MariaDB
 -- Versi PHP: 7.2.34
 
@@ -531,12 +531,6 @@ INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis
 (539, 'Ni Kadek Pebri Ami', 'Batukandik', '2009-01-02', 2, 17),
 (540, 'I Gede Agus Suputra', 'Saren', '2008-03-03', 1, 17),
 (541, 'Ni Luh Yulia Anggreni Putri Loka', 'Batukandik', '2007-10-07', 2, 17),
-(542, 'Putu Riko Aditya Nugraha', 'Denpasar', '2008-09-01', 1, 17),
-(544, 'Jasmin Aurura Sanjaya', 'Banyuwangi', '2011-12-06', 2, 14),
-(545, 'Daviano Ezekiel Sango', 'Palu', '2010-05-09', 1, 14),
-(546, 'I Gede Rangga Darrel Dika Putra', 'Denpasar', '2011-10-11', 1, 14),
-(547, 'Lioenell Chicarito', 'Bandung', '2012-09-04', 1, 14),
-(548, 'Alviano Christian Ngantung', 'Denpasar', '2012-05-01', 1, 14),
 (549, 'I Gst. Ngr. Agung Kd. Mahendra Suardinata', 'Denpasar', '2011-05-10', 1, 14),
 (550, 'I Gede Panji Evana Handryasa', 'Denpasar', '2012-07-03', 1, 14),
 (551, 'Putu Bagus Luhur Purna Wiguna', 'Denpasar', '2012-02-07', 1, 14),
@@ -797,13 +791,13 @@ INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis
 (1007, 'Ida Bagus Made Agastya Pramana Putra', 'Singaraja', '2011-05-17', 1, 4),
 (1008, 'Jennifer Christina Burggraaff', 'Denpasar', '2008-09-27', 2, 4),
 (1009, 'Ni Kadek Ayu Chintya Laksmi Dewi', 'Denpasar', '2009-08-18', 2, 4),
-(1010, 'Reisya Junia Dewi', 'Denpasar', '2011-06-19', 1, 4);
-INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis_kelamin`, `dojo`) VALUES
+(1010, 'Reisya Junia Dewi', 'Denpasar', '2011-06-19', 1, 4),
 (1015, 'I Ketut Kusuma Dinata', 'Denpasar', '2010-07-30', 1, 8),
 (1019, 'R. Aldi Satrio Indra Nugraha', 'Denpasar', '2006-05-29', 1, 8),
 (1020, 'Luh Putu Dinda Savitri', '', '0000-00-00', 2, 7),
 (1037, 'I Gusti Ngurah Rama Satwika Pramana', 'Denpasar', '2010-05-19', 1, 7),
-(1038, 'I Gusti Nguah Agung Bagus Mahatma Naryama', 'Denpasar', '2013-03-21', 1, 7),
+(1038, 'I Gusti Nguah Agung Bagus Mahatma Naryama', 'Denpasar', '2013-03-21', 1, 7);
+INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis_kelamin`, `dojo`) VALUES
 (1039, 'I Putu Rangga Acarya Wahana', 'Denpasar', '2010-07-30', 1, 7),
 (1040, 'I Putu Satya Sastrawan Wiguna', 'Denpasar', '2010-02-27', 1, 7),
 (1041, 'Si Gede Pranaya Aniasta', 'Denpasar', '2009-08-31', 1, 7),
@@ -816,14 +810,6 @@ INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis
 (1062, 'Syiffia Rahma Khomairah', 'Denpasar', '2008-08-13', 2, 5),
 (1085, 'I Gde Dharmendra Gandhi', 'Denpasar', '2003-09-24', 1, 5),
 (1086, 'Komang Riski Ananta Pratama', 'Denpasar', '2008-03-16', 1, 17),
-(1087, 'Jeriko Pratama Leoanak', 'Denpasar', '2010-08-31', 1, 14),
-(1088, 'Rio Firmansyah', 'Jatim', '2008-04-28', 1, 14),
-(1089, 'Nava Nataneila Sango', 'Palu', '2008-10-13', 2, 14),
-(1090, 'Ni Putu Yuina Renata', 'Denpasar', '2011-04-28', 2, 14),
-(1091, 'I Kadek Devanantha Dwi Ardana Putra', 'Denpasar', '2012-07-28', 1, 14),
-(1092, 'Fabian Imanuel Arung Pilirobo', 'Denpasar', '2011-09-30', 1, 14),
-(1093, 'Yoel Reinald Suryanto', 'Denpasar', '2011-02-23', 1, 14),
-(1094, 'Kristianto Bidiawan', 'Malang', '2011-11-24', 1, 14),
 (1095, 'Richard William Austin', 'Denpasar', '2010-09-27', 1, 14),
 (1096, 'I Putu Aby Yoga Saputra', 'Pacung', '2011-12-15', 1, 14),
 (1097, 'Rafael Fransisco Selan', 'Denpasar', '2012-02-27', 1, 14),
@@ -1702,17 +1688,17 @@ INSERT INTO `karateka` (`id_karateka`, `biodata`, `sabuk`, `tgl_ujian`, `no_ijas
 (427, 222, 2, '2018-12-16', '481/P.PROV-KKI/IV/2019', '2019-04-30', '64.30', 0),
 (428, 222, 3, NULL, '', NULL, '0.00', 1),
 (429, 223, 2, '2018-12-16', '482/P.PROV-KKI/IV/2019', '2019-04-30', '64.30', 0),
-(430, 223, 3, NULL, '', NULL, '0.00', 1),
+(430, 223, 3, '2019-05-12', '1386/P.PROV-KKI/VIII/2019', '2019-08-30', '68.60', 0),
 (431, 224, 2, '2018-12-16', '483/P.PROV-KKI/IV/2019', '2019-04-30', '64.30', 0),
-(432, 224, 3, NULL, '', NULL, '0.00', 1),
+(432, 224, 3, '2019-05-12', '1403/P.PROV-KKI/VIII/2019', '2019-08-30', '68.60', 0),
 (433, 225, 2, '2018-12-16', '484/P.PROV-KKI/IV/2019', '2019-04-30', '64.30', 0),
 (434, 225, 3, NULL, '', NULL, '0.00', 1),
 (435, 226, 2, '2018-12-16', '485/P.PROV-KKI/IV/2019', '2019-04-30', '64.30', 0),
 (436, 226, 3, NULL, '', NULL, '0.00', 1),
 (437, 227, 2, '2018-12-16', '486/P.PROV-KKI/IV/2019', '2019-04-30', '64.30', 0),
-(438, 227, 3, NULL, '', NULL, '0.00', 1),
+(438, 227, 3, '2019-05-12', '1396/P.PROV-KKI/VIII/2019', '2019-08-30', '68.60', 0),
 (439, 228, 2, '2018-12-16', '487/P.PROV-KKI/IV/2019', '2019-04-30', '64.30', 0),
-(440, 228, 3, NULL, '', NULL, '0.00', 1),
+(440, 228, 3, '2019-05-12', '1390/P.PROV-KKI/VIII/2019', '2019-08-30', '68.60', 0),
 (441, 229, 2, '2018-12-16', '488/P.PROV-KKI/IV/2019', '2019-04-30', '64.30', 0),
 (442, 229, 3, NULL, '', NULL, '0.00', 1),
 (443, 230, 2, '2018-12-16', '489/P.PROV-KKI/IV/2019', '2019-04-30', '64.30', 0),
@@ -1961,7 +1947,7 @@ INSERT INTO `karateka` (`id_karateka`, `biodata`, `sabuk`, `tgl_ujian`, `no_ijas
 (686, 327, 4, NULL, '', NULL, '0.00', 1),
 (687, 328, 2, NULL, '', NULL, '0.00', 0),
 (688, 328, 3, '2018-12-16', '480/P.PROV-KKI/IV/2019', '2019-04-30', '68.60', 0),
-(689, 328, 4, NULL, '', NULL, '0.00', 1),
+(689, 328, 4, '2019-05-12', '1406/P.PROV-KKI/VIII/2019', '2019-08-30', '70.00', 0),
 (690, 329, 2, NULL, '', NULL, '0.00', 0),
 (691, 329, 3, '2018-12-09', '521/P.PROV-KKI/IV/2019', '2019-04-30', '68.60', 0),
 (692, 329, 4, NULL, '', NULL, '0.00', 1),
@@ -2130,13 +2116,13 @@ INSERT INTO `karateka` (`id_karateka`, `biodata`, `sabuk`, `tgl_ujian`, `no_ijas
 (855, 371, 3, NULL, '', NULL, '0.00', 0),
 (856, 371, 4, '2019-01-27', '212/P.PROV-KKI/III/2019', '2019-03-30', '68.00', 0),
 (857, 371, 5, NULL, '', NULL, '0.00', 1),
-(858, 372, 2, NULL, '', NULL, '0.00', 0),
+(858, 372, 2, NULL, '', NULL, '0.00', 0);
+INSERT INTO `karateka` (`id_karateka`, `biodata`, `sabuk`, `tgl_ujian`, `no_ijasah`, `tgl_ijasah`, `nilai_rata`, `is_active`) VALUES
 (859, 372, 3, '2018-07-01', '1480/P.PROV-KKI/VIII/2018', '2018-08-30', '67.10', 0),
 (860, 372, 4, '2019-01-27', '213/P.PROV-KKI/III/2019', '2019-03-30', '68.10', 0),
 (861, 372, 5, NULL, '', NULL, '0.00', 1),
 (862, 373, 2, NULL, '', NULL, '0.00', 0),
-(863, 373, 3, NULL, '', NULL, '0.00', 0);
-INSERT INTO `karateka` (`id_karateka`, `biodata`, `sabuk`, `tgl_ujian`, `no_ijasah`, `tgl_ijasah`, `nilai_rata`, `is_active`) VALUES
+(863, 373, 3, NULL, '', NULL, '0.00', 0),
 (864, 373, 4, '2019-01-27', '214/P.PROV-KKI/III/2019', '2019-03-30', '67.70', 0),
 (865, 373, 5, NULL, '', NULL, '0.00', 1),
 (866, 374, 2, NULL, '', NULL, '0.00', 0),
@@ -2286,11 +2272,11 @@ INSERT INTO `karateka` (`id_karateka`, `biodata`, `sabuk`, `tgl_ujian`, `no_ijas
 (1010, 410, 2, NULL, '', NULL, '0.00', 0),
 (1011, 410, 3, NULL, '', NULL, '0.00', 0),
 (1012, 410, 4, '2018-12-16', '476/P.PROV-KKI/IV/2019', '2019-04-30', '70.00', 0),
-(1013, 410, 5, NULL, '', NULL, '0.00', 1),
+(1013, 410, 5, '2019-05-12', '1409/P.PROV-KKI/VIII/2019', '2019-08-30', '70.70', 0),
 (1014, 411, 2, NULL, '', NULL, '0.00', 0),
 (1015, 411, 3, NULL, '', NULL, '0.00', 0),
 (1016, 411, 4, '2018-12-16', '447/P.PROV-KKI/IV/2019', '2019-04-30', '70.00', 0),
-(1017, 411, 5, NULL, '', NULL, '0.00', 1),
+(1017, 411, 5, '2019-05-12', '1408/P.PROV-KKI/VIII/2019', '2019-08-30', '70.70', 0),
 (1018, 412, 2, NULL, '', NULL, '0.00', 0),
 (1019, 412, 3, NULL, '', NULL, '0.00', 0),
 (1020, 412, 4, '2018-12-16', '477/P.PROV-KKI/IV/2019', '2019-04-30', '70.00', 0),
@@ -2302,7 +2288,7 @@ INSERT INTO `karateka` (`id_karateka`, `biodata`, `sabuk`, `tgl_ujian`, `no_ijas
 (1026, 414, 2, NULL, '', NULL, '0.00', 0),
 (1027, 414, 3, NULL, '', NULL, '0.00', 0),
 (1028, 414, 4, '2018-12-16', '479/P.PROV-KKI/IV/2019', '2019-04-30', '70.00', 0),
-(1029, 414, 5, NULL, '', NULL, '0.00', 1),
+(1029, 414, 5, '2019-05-12', '1407/P.PROV-KKI/VIII/2019', '2019-08-30', '70.70', 0),
 (1030, 415, 2, NULL, '', NULL, '0.00', 0),
 (1031, 415, 3, NULL, '', NULL, '0.00', 0),
 (1032, 415, 4, '2018-12-09', '515/P.PROV-KKI/IV/2019', '2019-04-30', '70.00', 0),
@@ -2495,7 +2481,28 @@ INSERT INTO `karateka` (`id_karateka`, `biodata`, `sabuk`, `tgl_ujian`, `no_ijas
 (1222, 539, 3, '2019-12-29', '210/P.PROV-KKI/II/2020', '2020-02-28', '68.50', 0),
 (1223, 539, 4, NULL, NULL, NULL, NULL, 1),
 (1224, 1086, 2, '2019-07-14', '1181/P.PROV-KKI/VIII/2019', '2019-08-30', '67.90', 0),
-(1225, 1086, 3, NULL, NULL, NULL, NULL, 1);
+(1225, 1086, 3, NULL, NULL, NULL, NULL, 1),
+(1226, 540, 2, '2019-07-14', '1182/P.PROV-KKI/VIII/2019', '2019-08-30', '67.70', 0),
+(1227, 540, 3, NULL, NULL, NULL, NULL, 1),
+(1228, 541, 2, '2019-07-14', '1183/P.PROV-KKI/VIII/2019', '2019-08-30', '67.00', 0),
+(1229, 541, 3, '2019-12-29', '211/P.PROV-KKI/II/2020', '2020-02-28', '68.00', 0),
+(1230, 541, 4, NULL, NULL, NULL, NULL, 1),
+(1231, 454, 2, NULL, NULL, NULL, NULL, 0),
+(1232, 454, 3, NULL, NULL, NULL, NULL, 0),
+(1233, 454, 4, '2019-12-29', '255/P.PROV-KKI/II/2020', '2020-02-28', '74.40', 0),
+(1234, 454, 5, NULL, NULL, NULL, NULL, 1),
+(1235, 328, 5, '2019-12-01', '323/P.PROV-KKI/III/2020', '2020-03-30', '70.70', 0),
+(1236, 328, 6, NULL, NULL, NULL, NULL, 1),
+(1237, 410, 6, NULL, NULL, NULL, NULL, 1),
+(1238, 411, 6, NULL, NULL, NULL, NULL, 1),
+(1239, 414, 6, NULL, NULL, NULL, NULL, 1),
+(1240, 223, 4, NULL, NULL, NULL, NULL, 1),
+(1241, 224, 4, '2019-12-01', '306/P.PROV-KKI/III/2020', '2020-03-30', '70.00', 0),
+(1242, 224, 5, NULL, NULL, NULL, NULL, 1),
+(1243, 227, 4, '2019-12-01', '319/P.PROV-KKI/III/2020', '2019-03-30', '70.00', 0),
+(1244, 227, 5, NULL, NULL, NULL, NULL, 1),
+(1245, 228, 4, '2019-12-01', '316/P.PROV-KKI/III/2020', '2020-03-30', '70.00', 0),
+(1246, 228, 5, NULL, NULL, NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -2747,7 +2754,7 @@ ALTER TABLE `dojo`
 -- AUTO_INCREMENT untuk tabel `karateka`
 --
 ALTER TABLE `karateka`
-  MODIFY `id_karateka` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1226;
+  MODIFY `id_karateka` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1247;
 
 --
 -- AUTO_INCREMENT untuk tabel `sabuk`
