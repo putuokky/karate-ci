@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 10, 2021 at 06:36 PM
--- Server version: 10.3.30-MariaDB-cll-lve
--- PHP Version: 7.3.30
+-- Generation Time: May 03, 2022 at 07:53 AM
+-- Server version: 10.5.15-MariaDB-cll-lve
+-- PHP Version: 7.3.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `u1102678_karate`
+-- Database: `u1102678_ukarate`
 --
 
 -- --------------------------------------------------------
@@ -545,11 +545,6 @@ INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis
 (570, 'Anak Agung Kalista Putri', 'Denpasar', '2011-06-09', 2, 14),
 (571, 'Nathanel Serafino Teja', 'Denpasar', '2012-12-11', 1, 14),
 (572, 'I Kadek Dewangga Prasetya Baskara', 'Denpasar', '2013-04-01', 1, 14),
-(573, 'I Made Erwin Wijaya', 'Denpasar', '2008-09-08', 1, 12),
-(574, 'Desak Putu Raka Sandhi Yunika', 'Singaraja', '2007-01-09', 2, 12),
-(575, 'Kevin Febrian Aryo Putra', 'Banyuwangi', '2009-12-02', 1, 12),
-(576, 'Gede Raindra Nitimantra Kusuma', 'Denpasar', '2008-08-09', 1, 12),
-(577, 'I Gede Sandi Arya Pramana', 'Denpasar', '2010-04-01', 1, 12),
 (578, 'Ni Kadek Ngurah Ega Indah Marwani', 'Denpasar', '2009-11-05', 2, 12),
 (579, 'Ni Putu Ayu Rubby Suwenita', 'Denpasar', '2010-11-02', 2, 12),
 (580, 'I Kadek Andra Raditya Pramana', 'Denpasar', '2009-02-10', 1, 12),
@@ -798,14 +793,14 @@ INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis
 (1061, 'Ayu Anastasya', 'Parigi', '2008-07-23', 2, 5),
 (1062, 'Syiffia Rahma Khomairah', 'Denpasar', '2008-08-13', 2, 5),
 (1085, 'I Gde Dharmendra Gandhi', 'Denpasar', '2003-09-24', 1, 5),
-(1086, 'Komang Riski Ananta Pratama', 'Denpasar', '2008-03-16', 1, 17);
-INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis_kelamin`, `dojo`) VALUES
+(1086, 'Komang Riski Ananta Pratama', 'Denpasar', '2008-03-16', 1, 17),
 (1109, 'Rini Marganda Marsaulina Sihite', 'Denpasar', '2009-09-28', 2, 14),
 (1110, 'Ezra Dave Kristian', 'Denpasar', '2011-02-16', 1, 14),
 (1111, 'Philipus Galang Alexandra', 'Blitar ', '2011-06-23', 1, 14),
 (1112, 'Sondang Mulia Sihite', 'Denpasar', '2011-11-27', 2, 14),
 (1113, 'Rafa Pradipa Putra', 'Denpasar', '2012-11-28', 1, 14),
-(1114, 'Made Danendra Perkasa Gunawan', 'Denpasar', '2012-10-30', 1, 14),
+(1114, 'Made Danendra Perkasa Gunawan', 'Denpasar', '2012-10-30', 1, 14);
+INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis_kelamin`, `dojo`) VALUES
 (1115, 'Kadek Nathan Arya Kencana', 'Denpasar', '2011-06-29', 1, 14),
 (1116, 'Putu Kresna Asvathama Vedantha', 'Denpasar', '2013-02-13', 1, 14),
 (1117, 'Putu Denny Pradipta Putra', 'Mangupura', '2012-12-15', 1, 14),
@@ -819,12 +814,6 @@ INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis
 (1125, 'Putu Satria Awidya Putra', 'Denpasar', '2012-02-28', 1, 14),
 (1126, 'Ni Ketut Citra Ayu Widhiyawati', 'Denpasar', '2010-10-29', 2, 14),
 (1127, 'Marcello Rodame Sitompul', 'Denpasar', '2013-06-22', 1, 14),
-(1128, 'Aptaghani Janu Prasetiyo', 'Denpasar', '2009-01-19', 1, 12),
-(1129, 'Dewa Made Rai Subala', 'Singaraja', '2010-01-19', 1, 12),
-(1130, 'I Kadek Bagus Anggara Putra', 'Denpasar', '2010-04-20', 1, 12),
-(1131, 'I Kadek Demung Kusuma Yasa', 'Denpasar', '2009-02-23', 1, 12),
-(1132, 'I Komang Yudi Antara', 'Denpasar', '2008-11-20', 1, 12),
-(1133, 'I Nyoman Wardana Yasa', 'Denpasar', '2010-06-27', 1, 12),
 (1134, 'I Gusti Ngurah Surya Dharma Putra', 'Denpasar', '2010-08-19', 1, 12),
 (1135, 'I Gede Bali Wirawan', 'Samirenteng', '2009-12-29', 1, 12),
 (1136, 'I Wayan Gede Krisna Murti Subawa', 'Denpasar', '2009-10-26', 1, 12),
@@ -1165,14 +1154,14 @@ INSERT INTO `biodata` (`id_biodata`, `nama`, `tempat_lahir`, `tgl_lahir`, `jenis
 (1476, 'Rafitha Cristiana Putri', 'Denpasar', '2003-04-02', 2, 6),
 (1477, 'Yoga Fitrana Cahyadi', '-', '0000-00-00', 1, 6),
 (1478, 'Alvin Syahputra', 'Denpsar', '1988-02-19', 1, 6),
-(1479, 'Ni Putu Eka Purnamayanti', 'Sempidi', '1997-05-22', 2, 24),
-(1480, 'I Made Ichiro Dharma Yuda', 'Denpasar', '2001-11-10', 1, 24),
-(1481, 'Drs. I Gst Agung Kusuma Astawa', 'Tabanan', '1964-11-30', 1, 24),
-(1482, 'I Gst Agung Putra Handayana, SH, M.Kn', 'Denpasar', '1992-11-19', 1, 24),
-(1483, 'Ngakan Made Dwi Ari Aditya', 'Denpasar', '1997-11-15', 1, 24),
-(1484, 'Yudhistira Satya Permana', 'Brebes', '1995-08-06', 1, 24),
-(1485, 'Sais Halilintar', 'Denpasar', '2000-10-20', 1, 24),
-(1486, 'I Nyoman Wira Darma Putra', 'Singaraja', '2001-02-09', 1, 24);
+(1479, 'Ni Putu Eka Purnamayanti', 'Sempidi', '1997-05-22', 2, 3),
+(1480, 'I Made Ichiro Dharma Yuda', 'Denpasar', '2001-11-10', 1, 3),
+(1481, 'Drs. I Gst Agung Kusuma Astawa', 'Tabanan', '1964-11-30', 1, 3),
+(1482, 'I Gst Agung Putra Handayana, SH, M.Kn', 'Denpasar', '1992-11-19', 1, 3),
+(1483, 'Ngakan Made Dwi Ari Aditya', 'Denpasar', '1997-11-15', 1, 3),
+(1484, 'Yudhistira Satya Permana', 'Brebes', '1995-08-06', 1, 3),
+(1485, 'Sais Halilintar', 'Denpasar', '2000-10-20', 1, 3),
+(1486, 'I Nyoman Wira Darma Putra', 'Singaraja', '2001-02-09', 1, 3);
 
 -- --------------------------------------------------------
 
@@ -1194,8 +1183,8 @@ INSERT INTO `config` (`id_config`, `nama_config`, `config_value`) VALUES
 (1, 'brand', 'SIKUDACHI'),
 (2, 'main_header', 'SIKUDACHI (Sistem Informasi Kushin ryu Denpasar terChinta)'),
 (4, 'version', '1.07.20'),
-(5, 'nama_pengembang', 'mahesora.id'),
-(6, 'link_pengembang', 'http://www.mahesora.id/');
+(5, 'nama_pengembang', 'Mahesora'),
+(6, 'link_pengembang', 'https://mahesora.xyz/');
 
 -- --------------------------------------------------------
 
@@ -1236,7 +1225,6 @@ INSERT INTO `dojo` (`id_dojo`, `nama_dojo`) VALUES
 (21, 'Br Biaung'),
 (22, 'SD 18 Dangri'),
 (23, 'Pidada Cargo'),
-(24, 'Campuhan Asri'),
 (25, 'Brahmacarya');
 
 -- --------------------------------------------------------
@@ -1940,7 +1928,7 @@ INSERT INTO `karateka` (`id_karateka`, `biodata`, `sabuk`, `tgl_ujian`, `no_ijas
 (677, 324, 4, NULL, '', NULL, 0.00, 1),
 (678, 325, 2, NULL, '', NULL, 0.00, 0),
 (679, 325, 3, '2018-11-18', '391/P.PROV-KKI/IV/2019', '2019-04-30', 68.60, 0),
-(680, 325, 4, NULL, '', NULL, 0.00, 1),
+(680, 325, 4, '2019-05-05', '1354/P.PROV-KKI/VIII/2019', '2019-08-30', 70.00, 0),
 (681, 326, 2, NULL, '', NULL, 0.00, 0),
 (682, 326, 3, '2018-11-18', '392/P.PROV-KKI/IV/2019', '2019-04-30', 68.60, 0),
 (683, 326, 4, NULL, '', NULL, 0.00, 1),
@@ -2134,9 +2122,9 @@ INSERT INTO `karateka` (`id_karateka`, `biodata`, `sabuk`, `tgl_ujian`, `no_ijas
 (871, 375, 3, NULL, '', NULL, 0.00, 0),
 (872, 375, 4, '2019-01-27', '216/P.PROV-KKI/III/2019', '2019-03-30', 67.40, 0),
 (873, 375, 5, NULL, '', NULL, 0.00, 1),
-(874, 376, 2, NULL, '', NULL, 0.00, 0),
-(875, 376, 3, NULL, '', NULL, 0.00, 0);
+(874, 376, 2, NULL, '', NULL, 0.00, 0);
 INSERT INTO `karateka` (`id_karateka`, `biodata`, `sabuk`, `tgl_ujian`, `no_ijasah`, `tgl_ijasah`, `nilai_rata`, `is_active`) VALUES
+(875, 376, 3, NULL, '', NULL, 0.00, 0),
 (876, 376, 4, '2018-11-25', '303/P.PROV-KKI/IV/2019', '2019-04-30', 70.00, 0),
 (877, 376, 5, NULL, '', NULL, 0.00, 1),
 (878, 377, 2, NULL, '', NULL, 0.00, 0),
@@ -2242,7 +2230,7 @@ INSERT INTO `karateka` (`id_karateka`, `biodata`, `sabuk`, `tgl_ujian`, `no_ijas
 (978, 402, 2, NULL, '', NULL, 0.00, 0),
 (979, 402, 3, NULL, '', NULL, 0.00, 0),
 (980, 402, 4, '2018-11-18', '390/P.PROV-KKI/IV/2019', '2019-04-30', 70.00, 0),
-(981, 402, 5, NULL, '', NULL, 0.00, 1),
+(981, 402, 5, '2019-05-05', '1356/P.PROV-KKI/VIII/2019', '2019-08-30', 70.70, 0),
 (982, 403, 2, NULL, '', NULL, 0.00, 0),
 (983, 403, 3, NULL, '', NULL, 0.00, 0),
 (984, 403, 4, '2018-11-18', '441/P.PROV-KKI/IV/2019', '2019-04-30', 70.00, 0),
@@ -2546,7 +2534,137 @@ INSERT INTO `karateka` (`id_karateka`, `biodata`, `sabuk`, `tgl_ujian`, `no_ijas
 (1285, 1110, 3, '2019-05-12', '1395/P.PROV-KKI/VIII/2019', '2019-08-30', 68.60, 0),
 (1286, 1110, 4, NULL, NULL, NULL, NULL, 1),
 (1287, 561, 2, '2019-05-12', '1378/P.PROV-KKI/VIII/2019', '2019-08-30', 64.30, 0),
-(1288, 561, 3, NULL, NULL, NULL, NULL, 1);
+(1288, 561, 3, NULL, NULL, NULL, NULL, 1),
+(1289, 562, 2, '2019-05-12', '1379/P.PROV-KKI/VIII/2019', '2019-08-30', 64.30, 0),
+(1290, 562, 3, NULL, NULL, NULL, NULL, 1),
+(1291, 563, 2, '2019-05-12', '1380/P.PROV-KKI/VIII/2019', '2019-08-30', 64.30, 0),
+(1292, 563, 3, '2019-12-01', '305/P.PROV-KKI/III/2020', '2020-03-30', 68.60, 0),
+(1293, 563, 4, NULL, NULL, NULL, NULL, 1),
+(1294, 1111, 2, '2019-05-12', '1381/P.PROV-KKI/VIII/2019', '2019-08-30', 64.30, 0),
+(1295, 1111, 3, '2019-12-01', '304/P.PROV-KKI/III/2020', '2020-03-30', 68.60, 0),
+(1296, 1111, 4, NULL, NULL, NULL, NULL, 1),
+(1297, 564, 2, '2019-12-01', '275/P.PROV-KKI/III/2020', '2020-03-30', 64.30, 0),
+(1298, 564, 3, NULL, NULL, NULL, NULL, 1),
+(1299, 565, 2, '2019-01-12', '276/P.PROV-KKI/III/2020', '2020-03-30', 64.30, 0),
+(1300, 565, 3, NULL, NULL, NULL, NULL, 1),
+(1301, 1112, 2, '2019-01-12', '277/P.PROV-KKI/III/2020', '2020-03-30', 64.30, 0),
+(1302, 1112, 3, NULL, NULL, NULL, NULL, 1),
+(1303, 1113, 2, '2019-01-12', '278/P.PROV-KKI/III/2020', '2020-03-30', 64.30, 0),
+(1304, 1113, 3, NULL, NULL, NULL, NULL, 1),
+(1305, 1114, 2, '2019-01-12', '279/P.PROV-KKI/III/2020', '2020-03-30', 64.30, 0),
+(1306, 1114, 3, NULL, NULL, NULL, NULL, 1),
+(1307, 566, 2, '2019-01-12', '280/P.PROV-KKI/III/2020', '2020-03-30', 64.30, 0),
+(1308, 566, 3, NULL, NULL, NULL, NULL, 1),
+(1309, 1115, 2, '2019-01-12', '281/P.PROV-KKI/III/2020', '2020-03-30', 64.30, 0),
+(1310, 1115, 3, NULL, NULL, NULL, NULL, 1),
+(1311, 1116, 2, '2019-01-12', '282/P.PROV-KKI/III/2020', '2020-03-30', 64.30, 0),
+(1312, 1116, 3, NULL, NULL, NULL, NULL, 1),
+(1313, 1117, 2, '2019-01-12', '283/P.PROV-KKI/III/2020', '2020-03-30', 64.30, 0),
+(1314, 1117, 3, NULL, NULL, NULL, NULL, 1),
+(1315, 567, 2, '2019-01-12', '284/P.PROV-KKI/III/2020', '2020-03-30', 64.30, 0),
+(1316, 567, 3, NULL, NULL, NULL, NULL, 1),
+(1317, 1118, 2, '2019-01-12', '285/P.PROV-KKI/III/2020', '2020-03-30', 64.30, 0),
+(1318, 1118, 3, NULL, NULL, NULL, NULL, 1),
+(1319, 1119, 2, '2019-01-12', '286/P.PROV-KKI/III/2020', '2020-03-30', 64.30, 0),
+(1320, 1119, 3, NULL, NULL, NULL, NULL, 1),
+(1321, 1120, 2, '2019-01-12', '287/P.PROV-KKI/III/2020', '2020-03-30', 64.30, 0),
+(1322, 1120, 3, NULL, NULL, NULL, NULL, 1),
+(1323, 568, 2, '2019-01-12', '288/P.PROV-KKI/III/2020', '2020-03-30', 64.30, 0),
+(1324, 568, 3, NULL, NULL, NULL, NULL, 1),
+(1325, 1121, 2, '2019-01-12', '289/P.PROV-KKI/III/2020', '2020-03-30', 64.30, 0),
+(1326, 1121, 3, NULL, NULL, NULL, NULL, 1),
+(1327, 569, 2, '2019-01-12', '290/P.PROV-KKI/III/2020', '2020-03-30', 64.30, 0),
+(1328, 569, 3, NULL, NULL, NULL, NULL, 1),
+(1329, 1122, 2, '2019-01-12', '291/P.PROV-KKI/III/2020', '2020-03-30', 64.30, 0),
+(1330, 1122, 3, NULL, NULL, NULL, NULL, 1),
+(1331, 1123, 2, '2019-01-12', '292/P.PROV-KKI/III/2020', '2020-03-30', 64.30, 0),
+(1332, 1123, 3, NULL, NULL, NULL, NULL, 1),
+(1333, 570, 2, '2019-01-12', '293/P.PROV-KKI/III/2020', '2020-03-30', 64.30, 0),
+(1334, 570, 3, NULL, NULL, NULL, NULL, 1),
+(1335, 1124, 2, '2019-01-12', '294/P.PROV-KKI/III/2020', '2020-03-30', 64.30, 0),
+(1336, 1124, 3, NULL, NULL, NULL, NULL, 1),
+(1337, 571, 2, '2019-01-12', '295/P.PROV-KKI/III/2020', '2020-03-30', 64.30, 0),
+(1338, 571, 3, NULL, NULL, NULL, NULL, 1),
+(1339, 572, 2, '2019-01-12', '296/P.PROV-KKI/III/2020', '2020-03-30', 64.30, 0),
+(1340, 572, 3, NULL, NULL, NULL, NULL, 1),
+(1341, 1125, 2, '2019-01-12', '297/P.PROV-KKI/III/2020', '2020-03-30', 64.30, 0),
+(1342, 1125, 3, NULL, NULL, NULL, NULL, 1),
+(1343, 1126, 2, '2019-01-12', '298/P.PROV-KKI/III/2020', '2020-03-30', 64.30, 0),
+(1344, 1126, 3, NULL, NULL, NULL, NULL, 1),
+(1345, 1127, 2, '2019-01-12', '299/P.PROV-KKI/III/2020', '2020-03-30', 64.30, 0),
+(1346, 1127, 3, NULL, NULL, NULL, NULL, 1),
+(1347, 402, 6, NULL, NULL, NULL, NULL, 1),
+(1348, 325, 5, NULL, NULL, NULL, NULL, 1),
+(1349, 773, 2, '2019-12-29', '181/P.PROV-KKI/II/2020', '2020-02-28', 65.20, 0),
+(1350, 773, 3, '0000-00-00', '', '0000-00-00', 0.00, 1),
+(1351, 1455, 2, '2019-12-29', '182/P.PROV-KKI/II/2020', '2020-02-28', 65.30, 0),
+(1352, 1455, 3, '0000-00-00', '', '0000-00-00', 0.00, 1),
+(1353, 1456, 2, '2019-12-29', '183/P.PROV-KKI/II/2020', '2020-02-28', 65.20, 0),
+(1354, 1456, 3, '0000-00-00', '', '0000-00-00', 0.00, 1),
+(1355, 1457, 2, '2019-12-29', '184/P.PROV-KKI/II/2020', '2020-02-28', 65.50, 0),
+(1356, 1457, 3, '0000-00-00', '', '0000-00-00', 0.00, 1),
+(1357, 774, 2, '2019-12-29', '185/P.PROV-KKI/II/2020', '2020-02-28', 65.30, 0),
+(1358, 774, 3, '0000-00-00', '', '0000-00-00', 0.00, 1),
+(1359, 1458, 2, '2019-12-29', '186/P.PROV-KKI/II/2020', '2020-02-28', 65.20, 0),
+(1360, 1458, 3, '0000-00-00', '', '0000-00-00', 0.00, 1),
+(1361, 1459, 2, '2019-12-29', '187/P.PROV-KKI/II/2020', '2020-02-28', 64.50, 0),
+(1362, 1459, 3, '0000-00-00', '', '0000-00-00', 0.00, 1),
+(1363, 775, 2, '2019-12-29', '188/P.PROV-KKI/II/2020', '2020-02-28', 65.50, 0),
+(1364, 775, 3, '0000-00-00', '', '0000-00-00', 0.00, 1),
+(1365, 776, 2, '2019-12-29', '189/P.PROV-KKI/II/2020', '2020-02-28', 64.70, 0),
+(1366, 776, 3, '0000-00-00', '', '0000-00-00', 0.00, 1),
+(1367, 777, 2, '2019-12-29', '190/P.PROV-KKI/II/2020', '2020-02-28', 65.50, 0),
+(1368, 777, 3, '0000-00-00', '', '0000-00-00', 0.00, 1),
+(1369, 778, 2, '2019-12-29', '191/P.PROV-KKI/II/2020', '2020-02-28', 65.30, 0),
+(1370, 778, 3, '0000-00-00', '', '0000-00-00', 0.00, 1),
+(1371, 1460, 2, '2019-12-29', '192/P.PROV-KKI/II/2020', '2020-02-28', 64.80, 0),
+(1372, 1460, 3, '0000-00-00', '', '0000-00-00', 0.00, 1),
+(1373, 1461, 2, '2019-12-29', '193/P.PROV-KKI/II/2020', '2020-02-28', 64.30, 0),
+(1374, 1461, 3, '0000-00-00', '', '0000-00-00', 0.00, 1),
+(1375, 1462, 2, '2019-12-29', '194/P.PROV-KKI/II/2020', '2020-02-28', 65.00, 0),
+(1376, 1462, 3, '0000-00-00', '', '0000-00-00', 0.00, 1),
+(1377, 779, 2, '2019-12-29', '195/P.PROV-KKI/II/2020', '2020-02-28', 65.20, 0),
+(1378, 779, 3, '0000-00-00', '', '0000-00-00', 0.00, 1),
+(1379, 780, 2, '2019-12-29', '196/P.PROV-KKI/II/2020', '2020-02-28', 66.70, 0),
+(1380, 780, 3, '0000-00-00', '', '0000-00-00', 0.00, 1),
+(1381, 1123, 2, '0000-00-00', '292/P.PROV-KKI/III/2020', '0000-00-00', 64.30, 0),
+(1382, 1123, 3, '0000-00-00', '', '0000-00-00', 0.00, 1),
+(1383, 570, 2, '0000-00-00', '293/P.PROV-KKI/III/2020', '0000-00-00', 64.30, 0),
+(1384, 570, 3, '0000-00-00', '', '0000-00-00', 0.00, 1),
+(1385, 1124, 2, '0000-00-00', '294/P.PROV-KKI/III/2020', '0000-00-00', 64.30, 0),
+(1386, 1124, 3, '0000-00-00', '', '0000-00-00', 0.00, 1),
+(1387, 571, 2, '0000-00-00', '295/P.PROV-KKI/III/2020', '0000-00-00', 64.30, 0),
+(1388, 571, 3, '0000-00-00', '', '0000-00-00', 0.00, 1),
+(1389, 572, 2, '0000-00-00', '296/P.PROV-KKI/III/2020', '0000-00-00', 64.30, 0),
+(1390, 572, 3, '0000-00-00', '', '0000-00-00', 0.00, 1),
+(1391, 1125, 2, '0000-00-00', '297/P.PROV-KKI/III/2020', '0000-00-00', 64.30, 0),
+(1392, 1125, 3, '0000-00-00', '', '0000-00-00', 0.00, 1),
+(1393, 1126, 2, '0000-00-00', '298/P.PROV-KKI/III/2020', '0000-00-00', 64.30, 0),
+(1394, 1126, 3, '0000-00-00', '', '0000-00-00', 0.00, 1),
+(1395, 1127, 2, '0000-00-00', '299/P.PROV-KKI/III/2020', '0000-00-00', 64.30, 0),
+(1396, 1127, 3, '0000-00-00', '', '0000-00-00', 0.00, 1),
+(1397, 1464, 8, NULL, NULL, NULL, NULL, 1),
+(1398, 1465, 8, NULL, NULL, NULL, NULL, 1),
+(1399, 1466, 8, NULL, NULL, NULL, NULL, 1),
+(1400, 1467, 7, NULL, NULL, NULL, NULL, 1),
+(1401, 1468, 7, NULL, NULL, NULL, NULL, 1),
+(1402, 1469, 7, NULL, NULL, NULL, NULL, 1),
+(1403, 1470, 7, NULL, NULL, NULL, NULL, 1),
+(1404, 1471, 7, NULL, NULL, NULL, NULL, 1),
+(1405, 1472, 7, NULL, NULL, NULL, NULL, 1),
+(1406, 1473, 7, NULL, NULL, NULL, NULL, 1),
+(1407, 1474, 7, NULL, NULL, NULL, NULL, 1),
+(1408, 1475, 8, NULL, NULL, NULL, NULL, 1),
+(1409, 1476, 7, NULL, NULL, NULL, NULL, 1),
+(1410, 1477, 8, NULL, NULL, NULL, NULL, 1),
+(1411, 1478, 8, NULL, NULL, NULL, NULL, 1),
+(1412, 1479, 8, NULL, NULL, NULL, NULL, 1),
+(1413, 1480, 8, NULL, NULL, NULL, NULL, 1),
+(1414, 1481, 8, NULL, NULL, NULL, NULL, 1),
+(1415, 1482, 8, NULL, NULL, NULL, NULL, 1),
+(1416, 1483, 8, NULL, NULL, NULL, NULL, 1),
+(1417, 1484, 8, NULL, NULL, NULL, NULL, 1),
+(1418, 1485, 7, NULL, NULL, NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -2559,7 +2677,7 @@ CREATE TABLE `sabuk` (
   `nama_sabuk` varchar(100) NOT NULL,
   `warna_sabuk` varchar(50) NOT NULL,
   `warna_tulisan` varchar(50) NOT NULL,
-  `tingkatan_sabuk` varchar(10) NOT NULL
+  `tingkatan_sabuk` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -2574,7 +2692,7 @@ INSERT INTO `sabuk` (`id_sabuk`, `nama_sabuk`, `warna_sabuk`, `warna_tulisan`, `
 (5, 'Biru Tua', '#00008B', '#87CEEB', 'III'),
 (6, 'Coklat Muda', '#F4A460', '#00FF00', 'II'),
 (7, 'Coklat Tua', '#8B4513', '#FFFF00', 'I'),
-(8, 'Hitam', '#000000', '#FFFFFF', 's');
+(8, 'Hitam', '#000000', '#FFFFFF', 'Dan I, II, III');
 
 -- --------------------------------------------------------
 
@@ -2598,7 +2716,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `name`, `usrname`, `password`, `role_id`, `is_active`, `date_user`) VALUES
 (1, 'Okky Maheswara', 'putuokky', '$2y$10$p7MPGe3IGqcWU5TIyEFCEuH/BqcPqlYnArP5YvFaAVJ6MMdptaz/a', 1, 1, 1585405006),
-(5, 'Admin Satu', 'adminsatu', '$2y$10$nVkYpnIvHHDZNxiMdKA7m.kBALyRzj4lCTpOFI0VUIQ22uF/26696', 2, 1, 1601467411);
+(5, 'Admin Satu', 'adminsatu', '$2y$10$nVkYpnIvHHDZNxiMdKA7m.kBALyRzj4lCTpOFI0VUIQ22uF/26696', 2, 1, 1601467411),
+(6, 'Administrator', 'admin', '$2y$10$adbFiX8CFnO8CvdZvVefROtPkpwsB7.06jwtVZc0GaKn9lMbW7UG6', 3, 1, 1645324937);
 
 -- --------------------------------------------------------
 
@@ -2798,7 +2917,7 @@ ALTER TABLE `dojo`
 -- AUTO_INCREMENT for table `karateka`
 --
 ALTER TABLE `karateka`
-  MODIFY `id_karateka` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1289;
+  MODIFY `id_karateka` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1419;
 
 --
 -- AUTO_INCREMENT for table `sabuk`
@@ -2810,7 +2929,7 @@ ALTER TABLE `sabuk`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `user_access_menu`
